@@ -1,0 +1,41 @@
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+    <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+    <label for="mobile-menu">
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+    </label>
+    <!--
+    <div class="ae-container-fluid rk-topbar">
+    <h1><a routerLink=""><img src="assets/img/cintillo.png"></a></h1>
+    </div>
+    -->
+    <div class="ae-container-fluid rk-topbar" *ngIf="!nav.visible">
+      <div style="margin: auto; text-align: center;">
+      <h1><a routerLink=""><img src="assets/img/Cintillo3.png"></a></h1>
+    </div>
+      <br><br>
+      <nav class="rk-navigation">
+        <ul class="rk-menu">
+          <li routerLinkActive="Active" class="rk-menu__item"><a routerLink="/adminres" class="rk-menu__link">Administrador de resúmenes</a>
+          </li>
+          <li routerLinkActive="Active" class="rk-menu__item"><a routerLink="/adminpon" class="rk-menu__link">Administrador de ponencias</a><!--Poner vista de ponencias-->
+          </li>
+          <li routerLinkActive="Active" class="rk-menu__item"><a routerLink="/admrevisor" class="rk-menu__link">Registrar Revisores</a>
+          </li>
+          <!-- <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="login" class="rk-menu__link">Nuevo Menu</a>
+          </li>
+          <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="registro" class="rk-menu__link">Nuevo Menu</a>
+          </li> -->
+        </ul>
+
+      </nav>
+      <!--<h1 class="rk-logo"><a routerLink=""><img src="assets/img/logo_feca.jpg"></a></h1>-->
+    </div>
+  </header>

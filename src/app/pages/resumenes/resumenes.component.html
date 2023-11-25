@@ -1,0 +1,77 @@
+<block-ui>
+<br><br><br><br><br><br>
+<label><b>Bienvenido {{username}}</b></label><br>
+<button mat-stroked-button color="primary" (click)="cerrarSesion()">Logout</button>
+<div class="alert alert-primary" role="alert">
+    Quien registre este resumen quedará como autor principal
+  </div>
+<div class="container">
+   
+    <mat-toolbar class="form" color="primary" style="text-align: center;">
+        <span class="fill-remaining-space">Registro de resúmenes</span>
+    </mat-toolbar>
+    <div class="form">
+       
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre de la Ponencia</mat-label>
+            <input type="text" name="nombre"  matInput placeholder="Nombre de la Ponencia" style="text-transform:uppercase" [(ngModel)]="res.cirr_nom_ponencia" ngDefaultControl >
+            <mat-icon matSuffix>article</mat-icon>
+        </mat-form-field>
+
+       <mat-form-field class="example-full-width" ngDefaultControl>
+            <mat-label>Mesa</mat-label>
+            <mat-select name="mesa"  [(ngModel)]="res.cirr_id_mesa">
+              <mat-option *ngFor="let m of mesa" [value]="m.cicm_id">
+                {{m.cicm_descripcion}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field> 
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Email de contacto</mat-label>
+            <input type="email" name="email"  matInput placeholder="Email de contacto"  [(ngModel)]="res.cirr_mail_contacto" ngDefaultControl >
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+       
+        <div class="form-element">
+            <mat-label>Seleccionar resumen</mat-label>
+            <input type="file" #myInput class="file-input" id="formFile" accept=".doc, .docx"
+            (change)="seleccionarFoto($event);" >
+     
+     <div class="file-upload">
+     
+<!--         {{fileName || "Archivo no seleccionado."}} -->
+     
+<!--          <button mat-button color="primary" class="upload-btn"
+         (click)="editarFoto();">Guardar Documento
+             <mat-icon>attach_file</mat-icon>
+     
+         </button> -->
+     
+     </div>
+     
+     <div class="progress">
+     
+       <mat-progress-bar class="progress-bar" mode="determinate"
+                         [value]="uploadProgress" *ngIf="uploadProgress">
+     
+       </mat-progress-bar>
+     
+       <mat-icon class="cancel-upload" (click)="cancelUpload()" 
+                 *ngIf="uploadProgress">delete_forever</mat-icon>
+     
+     </div>
+        </div>
+   
+
+
+
+        <div class="form-element">
+            <button mat-raised-button color="primary" type="button" class="button" (click)="guardar(res)">Registrar Resumen</button>
+        </div>
+
+    </div>
+</div>
+</block-ui>

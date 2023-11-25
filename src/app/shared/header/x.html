@@ -1,0 +1,75 @@
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+    <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+    <label for="mobile-menu">
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+    </label>
+    
+    <div class="ae-container-fluid rk-topbar">
+    <h1><a routerLink=""><img src="assets/img/cintillo.png"></a></h1>
+    </div>
+    -
+    <div class="ae-container-fluid rk-topbar" *ngIf="nav.visible">
+      <div style="margin: auto; text-align: center;">
+      <h1><a routerLink=""><img src="assets/img/Cintillo3.png"></a></h1>
+    </div>
+      <br><br>
+      <nav class="rk-navigation">
+        <ul class="rk-menu">
+          <li routerLinkActive="Active" class="rk-menu__item"><a routerLink="convocatoria" class="rk-menu__link">Convocatoria</a>
+          </li>
+          <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="loginPon" class="rk-menu__link">Envío de ponencias en extenso</a>
+          </li>
+          <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="login" class="rk-menu__link">Envío de resúmenes</a>
+          </li> 
+          <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="registro" class="rk-menu__link">Registro</a>
+          </li>
+  <!--         <li  routerLinkActive="Active"  class="rk-menu__item"><a href="#0" class="rk-menu__link">Coloquio de posgrado</a>
+            <nav class="rk-menu__sub">
+              <ul class="rk-container">
+                <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="about" class="rk-menu__link">Convocatoria</a></li>
+                <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="registro" class="rk-menu__link">Registro</a></li>
+                <li routerLinkActive="Active"  class="rk-menu__item"><a href="design-styles.html" class="rk-menu__link">Envío</a></li>
+              </ul>
+            </nav>
+          </li> -->
+          <!--
+          <li routerLinkActive="Active"  class="rk-menu__item"><a href="#0" class="rk-menu__link">Acerca del Evento</a>
+            <nav class="rk-menu__sub">
+              <ul class="rk-container">
+                <li routerLinkActive="Active"  class="rk-menu__item"><a href="about.html" class="rk-menu__link">Programa</a></li>
+                <li routerLinkActive="Active"  class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Programa por capítulos</a></li>
+                <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="fechasimp" class="rk-menu__link">Fechas Importtantes</a></li>
+                <li routerLinkActive="Active"  class="rk-menu__item"><a href="design-styles.html" class="rk-menu__link">Conferencias</a></li>
+              </ul>
+            </nav>
+          </li>
+          -->
+          <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="fechasimp" class="rk-menu__link">Fechas Importtantes</a>
+          <li routerLinkActive="Active"  class="rk-menu__item"><a href="#" class="rk-menu__link">Hospedaje y Ubicaciones</a>
+          <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="faqs" class="rk-menu__link">FAQs</a>
+          </li>
+          <li routerLinkActive="Active"  class="rk-menu__item"><a routerLink="contacto" class="rk-menu__link">Contacto</a>
+          </li>
+        </ul>
+        <!--
+        <form class="rk-search">
+          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+          <label for="urku-search">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+            </svg>
+          </label>
+        </form>
+        -->
+      </nav>
+      <!--<h1 class="rk-logo"><a routerLink=""><img src="assets/img/logo_feca.jpg"></a></h1>-->
+    </div>
+  </header>

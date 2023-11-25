@@ -1,0 +1,81 @@
+<block-ui>
+    <br><br><br><br><br><br>
+    <label><b>Bienvenido {{username}}</b></label><br>
+    <button mat-stroked-button color="primary" (click)="cerrarSesion()">Logout</button>
+    <div class="alert alert-primary" role="alert">
+       <!--  Quien registre este resumen quedará como autor principal -->
+    </div>
+    <div class="container">
+
+        <mat-toolbar class="form" color="primary" style="text-align: center;">
+            <span class="fill-remaining-space">Registro de ponencias en extenso</span>
+        </mat-toolbar>
+        <div class="form">
+         <br>
+      
+            <mat-form-field class="example-full-width"  ngDefaultControl >
+                <mat-label>Resumenes Aceptados</mat-label>
+                <mat-select  name="estado" [(ngModel)]="ponencia_id">
+                  <mat-option *ngFor="let e of resumen_list" [value]="e.vcrr_id_pon">
+                    {{e.vcrr_ponencia}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+     
+
+
+            <div class="form-element">
+                <mat-label>Seleccionar portada </mat-label>
+                <input type="file" #myInputportada class="file-input" id="formFile" accept=".doc, .docx"
+                    (change)="seleccionarPortada($event);">
+
+
+                <div class="file-upload">
+                </div>
+
+                <div class="progress">
+
+                    <mat-progress-bar class="progress-bar" mode="determinate" [value]="uploadProgress"
+                        *ngIf="uploadProgress">
+
+                    </mat-progress-bar>
+
+                    <mat-icon class="cancel-upload" (click)="cancelUpload()"
+                        *ngIf="uploadProgress">delete_forever</mat-icon>
+
+                </div>
+            </div>
+
+            <div class="form-element">
+                <mat-label>Seleccionar extesnso </mat-label>
+                <input type="file" #myInputextenso class="file-input" id="formFile" accept=".doc, .docx"
+                    (change)="seleccionarExtenso($event);">
+
+
+                <div class="file-upload">
+                </div>
+
+                <div class="progress">
+
+                    <mat-progress-bar class="progress-bar" mode="determinate" [value]="uploadProgress"
+                        *ngIf="uploadProgress">
+
+                    </mat-progress-bar>
+
+                    <mat-icon class="cancel-upload" (click)="cancelUpload()"
+                        *ngIf="uploadProgress">delete_forever</mat-icon>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="form-element">
+                <button mat-raised-button color="primary" type="button" class="button" (click)="guardar()">Subir
+                    archivos</button>
+            </div>
+
+        </div>
+    </div>
+</block-ui>

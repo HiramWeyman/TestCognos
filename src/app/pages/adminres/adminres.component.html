@@ -1,0 +1,149 @@
+
+
+<br><br><br><br><br><br><br>
+<h4><label><b>Administración de Resúmenes</b></label></h4>
+
+<button mat-raised-button color="primary" (click)="exportAsExcel()">Exportar a Excel</button>
+<div class="mat-elevation-z8" >
+    <mat-form-field class="example-full-width">
+      <mat-label>Buscar</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8 w-100"  matSort>
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="vcrr_id_pon">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell class="mat-column" *matCellDef="let element" mat-cel> {{element.vcrr_id_pon}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="vcrr_ponencia">
+        <th mat-header-cell *matHeaderCellDef> Nombre de Resumen o Ponencia </th>
+        <td mat-cell class="mat-column-name" *matCellDef="let element">{{element.vcrr_ponencia}}  </td>
+      </ng-container>
+
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="vcrr_nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_nombre}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="vcrr_mail">
+        <th mat-header-cell *matHeaderCellDef>Email de Contacto </th>
+        <td mat-cell *matCellDef="let element">{{element.vcrr_mail}}  </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_mesa">
+        <th mat-header-cell *matHeaderCellDef> Mesa </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_mesa}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_f_recepcion">
+        <th mat-header-cell *matHeaderCellDef> Fecha de Recepción </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_f_recepcion}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_file_name">
+        <th mat-header-cell *matHeaderCellDef> Nombre de Archivo </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_file_name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_descrip">
+        <th mat-header-cell *matHeaderCellDef> Estatus </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_descrip}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="descarga">
+        <th mat-header-cell *matHeaderCellDef>Descargar Archivo </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary" (click)="getImageFromService(urlEndPoint + '/get_resumen/' + element.vcrr_id_pon,element.vcrr_file_name);">Descargar Archivo</button>
+        </td>
+      </ng-container>
+  
+  
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Acciones</th>
+        <td mat-cell *matCellDef="let element">
+            
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" (click)="EditEstatus(element.vcrr_id_pon,'A')">
+                <mat-icon>done_outline</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon" (click)="EditEstatus(element.vcrr_id_pon,'R')">
+                <mat-icon>clear</mat-icon>
+            </button>
+        
+        </td>
+        <!-- [routerLink]="['../exp',element.position]"  -->
+      <!--   (click)="getDatos(element.position)" -->
+    </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator #paginatorFirst [pageSizeOptions]="[4, 6, 8,100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+  <div class="mat-elevation-z8" #TABLE style="display: none;">
+
+
+  <table mat-table #table [dataSource]="dataSource2"  class="mat-elevation-z8 w-100"  matSort>
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="vcrr_id_pon">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell class="mat-column" *matCellDef="let element" mat-cel> {{element.vcrr_id_pon}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="vcrr_ponencia">
+        <th mat-header-cell *matHeaderCellDef> Nombre de Resumen o Ponencia </th>
+        <td mat-cell class="mat-column-name" *matCellDef="let element">{{element.vcrr_ponencia}}  </td>
+      </ng-container>
+
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="vcrr_nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_nombre}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="vcrr_mail">
+        <th mat-header-cell *matHeaderCellDef>Email de Contacto </th>
+        <td mat-cell *matCellDef="let element">{{element.vcrr_mail}}  </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_mesa">
+        <th mat-header-cell *matHeaderCellDef> Mesa </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_mesa}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_f_recepcion">
+        <th mat-header-cell *matHeaderCellDef> Fecha de Recepción </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_f_recepcion}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_file_name">
+        <th mat-header-cell *matHeaderCellDef> Nombre de Archivo </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_file_name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrr_descrip">
+        <th mat-header-cell *matHeaderCellDef> Estatus </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrr_descrip}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+    </table>
+    <mat-paginator #paginatorSecond [pageSizeOptions]="[100]" aria-label="Select page of users"></mat-paginator>
+  </div>

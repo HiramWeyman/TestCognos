@@ -1,0 +1,279 @@
+
+
+<block-ui>
+<br><br><br><br><br><br><br>
+<h4><label><b>Administración de Ponencias</b></label></h4>
+
+<button mat-raised-button color="primary" (click)="exportAsExcel()">Exportar a Excel</button>
+<div class="mat-elevation-z8" style="display: inline-table;">
+    <mat-form-field class="example-full-width">
+      <mat-label>Buscar</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8 w-100" style="font-size: 5px;"  matSort>
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="vcrp_id_ponencia">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell class="mat-column" *matCellDef="let element" mat-cel> {{element.vcrp_id_ponencia}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="vcrp_ponencia_desc">
+        <th mat-header-cell *matHeaderCellDef> Nombre de  Ponencia </th>
+        <td mat-cell class="mat-column-name" *matCellDef="let element">{{element.vcrp_ponencia_desc}}  </td>
+      </ng-container>
+
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="vcrp_mesa_desc">
+        <th mat-header-cell *matHeaderCellDef> Mesa </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_mesa_desc}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="vcrp_mail_contacto">
+        <th mat-header-cell *matHeaderCellDef>Email de Contacto </th>
+        <td mat-cell *matCellDef="let element">{{element.vcrp_mail_contacto}}  </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_ponente1">
+        <th mat-header-cell *matHeaderCellDef> Ponente 1 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_ponente1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_ponente2">
+        <th mat-header-cell *matHeaderCellDef> Ponente 2 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_ponente2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_ponente3">
+        <th mat-header-cell *matHeaderCellDef> Ponente 3 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_ponente3}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="portada">
+        <th mat-header-cell *matHeaderCellDef> Portada </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary" [disabled]="element.vcrp_portada==null" (click)="getImageFromService(urlEndPoint + '/get_portada/' + element.vcrp_id_ponencia,element.vcrp_ponencia_desc,'PORTADA_');">Portada</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ponencia">
+        <th mat-header-cell *matHeaderCellDef> Ponencia</th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary" [disabled]="element.vcrp_ponencia==null" (click)="getImageFromService(urlEndPoint + '/get_ponencia/' + element.vcrp_id_ponencia,element.vcrp_ponencia_desc,'PONENCIA_');">Ponencia</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="carta_cesion">
+        <th mat-header-cell *matHeaderCellDef> Carta de Cesión </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary" [disabled]="element.vcrp_c_cesion==null">Cesión</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="presentacion">
+        <th mat-header-cell *matHeaderCellDef>Presentación </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary" [disabled]="element.vcrp_presentacion==null">Presentación</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_revisor1">
+        <th mat-header-cell *matHeaderCellDef> Revisor 1 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_revisor1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_revisor2">
+        <th mat-header-cell *matHeaderCellDef> Revisor 2 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_revisor2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_revisor3">
+        <th mat-header-cell *matHeaderCellDef> Revisor 3 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_revisor3}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="estatus">
+        <th mat-header-cell *matHeaderCellDef> Estatus </th>
+        <td mat-cell *matCellDef="let element"> {{element.estatus}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Acciones</th>
+        <td mat-cell *matCellDef="let element">
+
+          <button mat-icon-button [matMenuTriggerFor]="menu2" #menuTrigger2 aria-label="Example icon-button with a menu" style="background-color: #3f51b5;color: aliceblue;">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu2="matMenu">
+            <button mat-menu-item   (click)="editarEstatusPon(element.vcrp_id_ponencia,'A')">
+              <mat-icon>done_outline</mat-icon>
+              <span>Aceptado</span>
+            </button>
+       <!--      <button mat-menu-item  (click)="editarEstatusPon(element.vcrp_id_ponencia,'O')">
+              <mat-icon>people</mat-icon>
+              <span>Aceptado con observaciones</span>
+            </button> -->
+            <button mat-menu-item  (click)="editarEstatusPon(element.vcrp_id_ponencia,'R')">
+              <mat-icon>clear</mat-icon>
+              <span>Rechazado</span>
+            </button>
+          </mat-menu>
+            
+
+
+         <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger aria-label="Example icon-button with a menu" style="background-color: #ff4081;color: aliceblue;">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="openDialog(1,element.vcrp_id_ponencia,element.vcrp_ponencia_desc)">
+                <mat-icon>people</mat-icon>
+                <span>Asignar Revisor 1</span>
+              </button>
+              <button mat-menu-item (click)="openDialog(2,element.vcrp_id_ponencia,element.vcrp_ponencia_desc)">
+                <mat-icon>people</mat-icon>
+                <span>Asignar Revisor 2</span>
+              </button>
+              <button mat-menu-item (click)="openDialog(3,element.vcrp_id_ponencia,element.vcrp_ponencia_desc)">
+                <mat-icon>people</mat-icon>
+                <span>Asignar Revisor 3</span>
+              </button>
+
+              <button mat-menu-item (click)="openDialog2(1,element.vcrp_id_ponencia,element.vcrp_ponencia_desc)">
+                <mat-icon>assignment</mat-icon>
+                <span>Observaciones Revisor 1</span>
+              </button>
+
+              <button mat-menu-item (click)="openDialog2(2,element.vcrp_id_ponencia,element.vcrp_ponencia_desc)">
+                <mat-icon>assignment</mat-icon>
+                <span>Observaciones Revisor 2</span>
+              </button>
+
+              <button mat-menu-item (click)="openDialog2(3,element.vcrp_id_ponencia,element.vcrp_ponencia_desc)">
+                <mat-icon>assignment</mat-icon>
+                <span>Observaciones Revisor 3</span>
+              </button>
+            </mat-menu>
+
+            <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon" [disabled]="element.vcrp_ponencia==null" (click)="MandarCartaAceptacion(element.vcrp_id_ponencia)">
+              <mat-icon> email</mat-icon>
+            </button>
+        
+        </td>
+        <!-- [routerLink]="['../exp',element.position]"  -->
+      <!--   (click)="getDatos(element.position)" -->
+    </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator #paginatorFirst [pageSizeOptions]="[4, 6, 8,100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+  <div class="mat-elevation-z8" #TABLE style="display: none;">
+
+
+  <table mat-table #table [dataSource]="dataSource2"  class="mat-elevation-z8 w-100"  matSort>
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="vcrp_id_ponencia">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell class="mat-column" *matCellDef="let element" mat-cel> {{element.vcrp_id_ponencia}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="vcrp_ponencia_desc">
+        <th mat-header-cell *matHeaderCellDef> Nombre de  Ponencia </th>
+        <td mat-cell class="mat-column-name" *matCellDef="let element">{{element.vcrp_ponencia_desc}}  </td>
+      </ng-container>
+
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="vcrp_mesa_desc">
+        <th mat-header-cell *matHeaderCellDef> Mesa </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_mesa_desc}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="vcrp_mail_contacto">
+        <th mat-header-cell *matHeaderCellDef>Email de Contacto </th>
+        <td mat-cell *matCellDef="let element">{{element.vcrp_mail_contacto}}  </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_ponente1">
+        <th mat-header-cell *matHeaderCellDef> Ponente 1 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_ponente1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_ponente2">
+        <th mat-header-cell *matHeaderCellDef> Ponente 2 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_ponente2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_ponente3">
+        <th mat-header-cell *matHeaderCellDef> Ponente 3 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_ponente3}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="portada">
+        <th mat-header-cell *matHeaderCellDef> Portada </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary">Portada</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ponencia">
+        <th mat-header-cell *matHeaderCellDef> Ponencia</th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary">Ponencia</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="carta_cesion">
+        <th mat-header-cell *matHeaderCellDef> Carta de Cesión </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary">Carta de Cesión</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="presentacion">
+        <th mat-header-cell *matHeaderCellDef>Presentación </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="primary">Presentación</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_revisor1">
+        <th mat-header-cell *matHeaderCellDef> Revisor 1 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_revisor1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_revisor2">
+        <th mat-header-cell *matHeaderCellDef> Revisor 2 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_revisor2}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vcrp_revisor3">
+        <th mat-header-cell *matHeaderCellDef> Revisor 3 </th>
+        <td mat-cell *matCellDef="let element"> {{element.vcrp_revisor3}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="estatus">
+        <th mat-header-cell *matHeaderCellDef> Estatus </th>
+        <td mat-cell *matCellDef="let element"> {{element.estatus}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+    </table>
+    <mat-paginator #paginatorSecond [pageSizeOptions]="[100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</block-ui>

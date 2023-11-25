@@ -1,0 +1,21 @@
+<block-ui>
+    <div>
+        <mat-dialog-content>
+            <h4>Observaciones de Revisor {{data.revisor}}</h4>
+            <hr>
+           <textarea *ngIf="data.revisor==1" name="observacion" id="observacion" cols="62" rows="7" [(ngModel)]="ponencia_list.vcrp_observ_r1"></textarea>
+           <textarea *ngIf="data.revisor==2" name="observacion" id="observacion" cols="62" rows="7" [(ngModel)]="ponencia_list.vcrp_observ_r2"></textarea>
+           <textarea *ngIf="data.revisor==3" name="observacion" id="observacion" cols="62" rows="7" [(ngModel)]="ponencia_list.vcrp_observ_r3"></textarea>
+            <mat-dialog-actions>
+                <button *ngIf="data.revisor==1" mat-raised-button color="primary" mat-dialog-close (click)="RegistrarObs(ponencia_list.vcrp_id_ponencia,1,ponencia_list.vcrp_observ_r1)" [disabled]="ponencia_list.vcrp_observ_r1==null">Registrar Observacion</button>
+                <button *ngIf="data.revisor==2"mat-raised-button color="primary" mat-dialog-close (click)="RegistrarObs(ponencia_list.vcrp_id_ponencia,2,ponencia_list.vcrp_observ_r2)"  [disabled]="ponencia_list.vcrp_observ_r2==null">Registrar Observacion</button>
+                <button *ngIf="data.revisor==3"mat-raised-button color="primary" mat-dialog-close (click)="RegistrarObs(ponencia_list.vcrp_id_ponencia,3,ponencia_list.vcrp_observ_r3)"  [disabled]="ponencia_list.vcrp_observ_r3==null">Registrar Observacion</button>
+<!--                 <button *ngIf="data.revisor==1"mat-button mat-dialog-close (click)="ActualizarObs(ponencia_list.vcrp_id_ponencia,1,ponencia_list.vcrp_observ_r1)" [disabled]="ponencia_list.vcrp_observ_r1==null">Actualizar Observacion</button>
+                <button *ngIf="data.revisor==2"mat-button mat-dialog-close (click)="ActualizarObs(ponencia_list.vcrp_id_ponencia,2,ponencia_list.vcrp_observ_r2)" [disabled]="ponencia_list.vcrp_observ_r2==null">Actualizar Observacion</button>
+                <button *ngIf="data.revisor==3" mat-button mat-dialog-close (click)="ActualizarObs(ponencia_list.vcrp_id_ponencia,3,ponencia_list.vcrp_observ_r3)" [disabled]="ponencia_list.vcrp_observ_r3==null">Actualizar Observacion</button> -->
+            </mat-dialog-actions>
+          </mat-dialog-content>
+        
+    </div>
+ 
+</block-ui>

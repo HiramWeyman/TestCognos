@@ -1,0 +1,17 @@
+<block-ui>
+    <div>
+        <mat-dialog-content>
+            <h4>Asignación de Revisor {{data.revisor}}</h4>
+            <hr>
+            <select class="form-control" style="width: 100%;" #teams (change)="onSelected(teams.value)">
+                <option selected="selected" value="">--Seleccione Revisor--</option>
+                <option *ngFor="let e of revisores_list" [value]="e.vrev_id_registro+','+e.vrev_mail+','+e.vrev_nombre">{{e.vrev_nombre}}</option>
+            </select>
+            <mat-dialog-actions>
+                <button mat-button mat-dialog-close (click)="editarRevisorPon()">Asignar Revisor</button>
+            </mat-dialog-actions>
+          </mat-dialog-content>
+        
+    </div>
+ 
+</block-ui>

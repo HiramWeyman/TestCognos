@@ -1,0 +1,54 @@
+<block-ui>
+<br><br><br><br><br><br>
+<div class="container">
+    <mat-toolbar class="form" color="primary" style="text-align: center;">
+        <span class="fill-remaining-space">Registro de Revisor</span>
+    </mat-toolbar>
+    <div class="form">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido Paterno</mat-label>
+            <input type="text" name="paterno"  matInput placeholder="Apellido Paterno" style="text-transform:uppercase" [(ngModel)]="usuario.cire_paterno" ngDefaultControl maxlength="50" >
+            <mat-icon matSuffix>people</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido Materno</mat-label>       
+            <input type="text" name="materno" matInput placeholder="Apellido Materno"  style="text-transform:uppercase" [(ngModel)]="usuario.cire_materno" ngDefaultControl maxlength="50">
+            <mat-icon matSuffix>people</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input type="text" name="nombre"  matInput placeholder="Nombre"  style="text-transform:uppercase" [(ngModel)]="usuario.cire_nombre" ngDefaultControl maxlength="50">
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" style="display: none;">
+            <mat-label>Tipo</mat-label>
+            <mat-select name="tipo"  [(ngModel)]="detreg.cidr_id_tipo">
+              <mat-option selected="selected" [value]="3">
+                REVISOR
+              </mat-option>
+            </mat-select>
+        </mat-form-field> 
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" name="email"  matInput placeholder="Email" [(ngModel)]="usuario.cire_email" ngDefaultControl maxlength="100">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Teléfono Celular</mat-label>
+            <input type="tel" name="cel" matInput placeholder="6181234567" [(ngModel)]="usuario.cire_celular" ngDefaultControl maxlength="10">
+            <mat-icon matSuffix>smartphone</mat-icon>
+        </mat-form-field>
+
+        <div class="form-element">
+            <button mat-raised-button color="primary" type="button" class="button" (click)="guardar(usuario)">Guardar Registro</button>
+        </div>
+
+    </div>
+</div>
+</block-ui>

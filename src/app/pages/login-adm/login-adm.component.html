@@ -1,0 +1,25 @@
+<br><br><br><br><br><br>
+<div class="container">
+    <mat-toolbar class="form" color="primary" style="text-align: center;">
+        <span class="fill-remaining-space">Login para administración de resúmenes</span>
+    </mat-toolbar>
+    <div class="form">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Usuario Email</mat-label>
+            <input type="text" name="paterno"  matInput placeholder="Usuario Email"  [(ngModel)]="log.usuario" ngDefaultControl >
+            <mat-icon matSuffix>lock_person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>       
+            <input type="password" name="materno" matInput placeholder="password"  [(ngModel)]="log.password" ngDefaultControl >
+            <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+
+        <div class="form-element">
+            <button mat-raised-button color="primary" type="button" class="button" (click)="login(log)">Login</button>
+        </div>
+
+    </div>
+</div>

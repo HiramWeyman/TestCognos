@@ -1,0 +1,17 @@
+.example-full-width {
+  width: 100%;
+}
+
+
+
+ .mat-column{
+  width :50px;
+ }
+
+ .mat-column-name{
+  width :150px;
+ }
+
+ #mat-paginator{
+  width: 115%;
+ }

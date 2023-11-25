@@ -1,0 +1,40 @@
+<br><br><br><br><br><br>
+<div class="container">
+    <mat-toolbar class="form" color="primary" style="text-align: center;">
+        <span class="fill-remaining-space">Login para envío de ponencias en extenso</span>
+    </mat-toolbar>
+    <div class="form">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido Paterno</mat-label>
+            <input type="text" name="paterno"  matInput placeholder="Apellido Paterno" style="text-transform:uppercase" [(ngModel)]="log.cire_paterno" ngDefaultControl >
+            <mat-icon matSuffix>people</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido Materno</mat-label>       
+            <input type="text" name="materno" matInput placeholder="Apellido Materno"  style="text-transform:uppercase" [(ngModel)]="log.cire_materno" ngDefaultControl >
+            <mat-icon matSuffix>people</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input type="text" name="nombre"  matInput placeholder="Nombre"  style="text-transform:uppercase" [(ngModel)]="log.cire_nombre" ngDefaultControl >
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+       
+        <mat-form-field class="example-full-width">
+            <mat-label>Teléfono Celular</mat-label>
+            <input type="tel" name="cel" matInput placeholder="6181234567" [(ngModel)]="log.cire_celular" ngDefaultControl >
+            <mat-icon matSuffix>smartphone</mat-icon>
+        </mat-form-field>
+
+
+
+        <div class="form-element">
+            <button mat-raised-button color="primary" type="button" class="button" (click)="login()">Login</button>
+        </div>
+
+    </div>
+</div>
