@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { RespSCL } from 'src/app/interfaces/RespSCL';
 import { InicioService } from 'src/app/services/inicio.service';
 import { NavbarService } from 'src/app/services/navbar.service';
@@ -12,6 +13,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
+  @BlockUI()
+  blockUI!: NgBlockUI;
   id!: number;
   preguntas!: any[];
   public modelArray: RespSCL[] = [];
@@ -280,6 +283,7 @@ export class InicioComponent {
   }
   onSubmit({ value, valid }: { value: any, valid: boolean }) {
     /*  console.log(value, valid); */
+    this.blockUI.start('Guardando...');
     this.isFormSubmitted = true;
     console.log(valid);
     if (!valid) {
@@ -923,6 +927,29 @@ export class InicioComponent {
         res_respuesta: Number(value.respuesta_90),
         res_id_paciente: this.id,
       });
+
+      this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+   
+        if(usr){
+          this.blockUI.stop();
+          console.log(usr);
+          Swal.fire('Respuestas Guardadas', `${usr.Descripcion}!`, 'success');
+      
+          const btn = document.getElementById('btn') as HTMLButtonElement | null;
+          btn?.setAttribute('disabled', '');
+        }
+
+    },
+      error => {
+        console.log(error);
+        this.blockUI.stop();
+        Swal.fire({
+          title: 'ERROR!!!',
+          text: error.error.message,
+          icon: 'error'
+        });
+
+      }); 
 
       const btn = document.getElementById('btn') as HTMLButtonElement | null;
       btn?.setAttribute('disabled', '');

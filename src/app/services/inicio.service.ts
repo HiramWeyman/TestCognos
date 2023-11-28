@@ -8,6 +8,7 @@ import { PonenciaLista } from '../interfaces/PonenciaLista';
 import { Ponencia } from '../interfaces/ponencia';
 import { RevisoresList } from '../interfaces/RevisoresList';
 import { Revisor } from '../interfaces/Revisor';
+import { RespSCL } from '../interfaces/RespSCL';
 
 
 @Injectable({
@@ -30,6 +31,18 @@ export class InicioService {
   }
 
 
+  EnviarResp(resp: RespSCL[]) {
+   
+    console.log(resp);
+
+    //return this.http.post<Usuarios>(this.urlEndPoint + '/tusuarios/'+login.user+'/'+login.password, login).pipe(
+    return this.http.post(`${environment.rutaAPI + '/scl/testSCLResp'}`, resp).pipe(
+      map((response: any) => {
+        return response;
+      })
+    );
+
+  }
 
   GetResumenes(): Observable<ResumenLista[]> {
     return this.http.get(`${environment.rutaAPI}` + '/lista_resumen').pipe(
