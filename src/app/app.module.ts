@@ -42,6 +42,7 @@ import { LineamientosComponent } from './pages/lineamientos/lineamientos.compone
 import { LoginPonComponent } from './pages/login-pon/login-pon.component';
 import { PonenciasComponent } from './pages/ponencias/ponencias.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestbaianComponent } from './pages/testbaian/testbaian.component';
 
 
 
@@ -70,7 +71,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     InicioadmComponent,
     LineamientosComponent,
     LoginPonComponent,
-    PonenciasComponent
+    PonenciasComponent,
+    TestbaianComponent
 
   ],
   imports: [

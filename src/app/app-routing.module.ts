@@ -19,11 +19,13 @@ import { InicioadmComponent } from './pages/inicioadm/inicioadm.component';
 import { LineamientosComponent } from './pages/lineamientos/lineamientos.component';
 import { LoginPonComponent } from './pages/login-pon/login-pon.component';
 import { PonenciasComponent } from './pages/ponencias/ponencias.component';
+import { TestbaianComponent } from './pages/testbaian/testbaian.component';
 
 
 const routes: Routes = [
 {path:'',component:InicioComponent}, 
 {path:'inicio/:id',component:InicioComponent},
+{path:'testbaian/:id',component:TestbaianComponent},
 {path:'registro',component:RegistroComponent},
 {path:'about',component:AboutComponent},
 {path:'contacto',component:ContactoComponent},

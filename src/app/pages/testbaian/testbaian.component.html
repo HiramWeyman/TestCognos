@@ -1,0 +1,155 @@
+<br>
+<div class="container">
+    <div class="et_pb_text_inner">
+        <h1><span style="color: #000000;">Test BAI</span> <span style="color: #4646c4;"> Inventario de Ansiedad de
+                Beck</span></h1>
+    </div>
+    <div>
+        <p><b>
+            Instrucciones:
+            A continuación, se escriben una lista de síntomas comunes de ansiedad. Lee cuidadosamente cada ítem de la
+            lista e indica cuándo te ha molestado cada uno de estos síntomas durante la semana pasada incluyendo el día
+            de hoy, poniendo una equis X en el espacio correspondiente de la columna que se encuentra al lado derecho de
+            cada síntoma.
+        </b></p>
+    </div>
+    <!--    novalidate (ngSubmit)="submit()"  -->
+    <form (ngSubmit)="onSubmit(form)">
+
+        <div [formGroup]="form" *ngFor="let item of preguntas;let i = index">
+            <label for="gender">{{item.bai_desc}}</label>
+            <input type="hidden" name="pregunta_{{i+1}}" formControlName="pregunta_{{i+1}}" value="{{item.bai_id}}">
+
+            <div *ngFor="let itemx of items;let idx = index">
+                <input type="radio" value="{{itemx.value}}" name="respuesta_{{i+1}}" formControlName="respuesta_{{i+1}}"
+                    required="required"> {{ itemx.dessc }}
+            </div>
+        </div>
+
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_1'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_1'].errors?.['required']">Ingrese una Respuesta a la pregunta 1.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_2'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_2'].errors?.['required']">Ingrese una Respuesta a la pregunta 2.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_3'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_3'].errors?.['required']">Ingrese una Respuesta a la pregunta 3.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_4'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_4'].errors?.['required']">Ingrese una Respuesta a la pregunta 4.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_5'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_5'].errors?.['required']">Ingrese una Respuesta a la pregunta 5.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_6'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_6'].errors?.['required']">Ingrese una Respuesta a la pregunta 6.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_7'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_7'].errors?.['required']">Ingrese una Respuesta a la pregunta 7.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_8'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_8'].errors?.['required']">Ingrese una Respuesta a la pregunta 8.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_9'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_9'].errors?.['required']">Ingrese una Respuesta a la pregunta 9.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_10'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_10'].errors?.['required']">Ingrese una Respuesta a la pregunta 10.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_11'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_11'].errors?.['required']">Ingrese una Respuesta a la pregunta 11.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_12'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_12'].errors?.['required']">Ingrese una Respuesta a la pregunta 12.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_13'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_13'].errors?.['required']">Ingrese una Respuesta a la pregunta 13.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_14'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_14'].errors?.['required']">Ingrese una Respuesta a la pregunta 14.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_15'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_15'].errors?.['required']">Ingrese una Respuesta a la pregunta 15.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_16'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_16'].errors?.['required']">Ingrese una Respuesta a la pregunta 16.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_17'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_17'].errors?.['required']">Ingrese una Respuesta a la pregunta 17.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_18'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_18'].errors?.['required']">Ingrese una Respuesta a la pregunta 18.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_19'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_19'].errors?.['required']">Ingrese una Respuesta a la pregunta 19.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_20'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_20'].errors?.['required']">Ingrese una Respuesta a la pregunta 20.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_21'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_21'].errors?.['required']">Ingrese una Respuesta a la pregunta 21.
+            </div>
+        </div>
+
+
+
+        <button type="submit" id="btn" class="btn btn-primary" expand="block">Enviar Respuestas</button>
+    </form>
+</div>
+<!-- <div class="ae-container-fluid ae-container-fluid--inner rk-main">
+    <br>
+  
+  </div> -->

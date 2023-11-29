@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-import { RespSCL } from 'src/app/interfaces/RespSCL';
+import { RespTest } from 'src/app/interfaces/RespTest';
 import { InicioService } from 'src/app/services/inicio.service';
 import { NavbarService } from 'src/app/services/navbar.service';
 import Swal from 'sweetalert2';
@@ -17,7 +17,7 @@ export class InicioComponent {
   blockUI!: NgBlockUI;
   id!: number;
   preguntas!: any[];
-  public modelArray: RespSCL[] = [];
+  public modelArray: RespTest[] = [];
   items = [
     { groupName: 'groupA', value: '0', dessc: 'Nada' },
     { groupName: 'groupA', value: '1', dessc: 'Poco' },
@@ -32,8 +32,6 @@ export class InicioComponent {
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
     this.cargarPreguntas();
-
-    /*   this.nav.show(); */
   }
 
 
@@ -933,7 +931,7 @@ export class InicioComponent {
         if(usr){
           this.blockUI.stop();
           console.log(usr);
-          Swal.fire('Respuestas Guardadas', `${usr.Descripcion}!`, 'success');
+          Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
       
           const btn = document.getElementById('btn') as HTMLButtonElement | null;
           btn?.setAttribute('disabled', '');
