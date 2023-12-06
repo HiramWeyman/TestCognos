@@ -44,6 +44,16 @@ export class InicioService {
 
   }
 
+  DeleteResp(id:number) {
+  
+    return this.http.delete(`${environment.rutaAPI + '/scl/deleteSCLResp/'+id}`).pipe(
+      map((response: any) => {
+        return response;
+      })
+    );
+
+  }
+
   
 
 

@@ -9,12 +9,13 @@ import { Ponencia } from '../interfaces/ponencia';
 import { RevisoresList } from '../interfaces/RevisoresList';
 import { Revisor } from '../interfaces/Revisor';
 import {  RespTest } from '../interfaces/RespTest';
+import { RespTestBDI } from '../interfaces/RespTestBDI';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class TestbaianService {
+export class TestbdidpService {
 
   constructor(private http: HttpClient) { }
 
@@ -24,19 +25,19 @@ export class TestbaianService {
     return this.http.post<Pacientes>(`${environment.rutaAPI}` + '/Pacientes', paciente);
   } */
 
-  GetPreguntas(): Observable<any[]> {
+ /*  GetPreguntas(): Observable<any[]> {
     return this.http.get(`${environment.rutaAPI}` + '/baiAn/testBAIan').pipe(
       map(response => response as any[])
     );
-  }
+  } */
 
 
-  EnviarResp(resp: RespTest[]) {
+  EnviarResp(resp: RespTestBDI[]) {
    
     console.log(resp);
 
     //return this.http.post<Usuarios>(this.urlEndPoint + '/tusuarios/'+login.user+'/'+login.password, login).pipe(
-    return this.http.post(`${environment.rutaAPI + '/baiAn/testBAIanResp'}`, resp).pipe(
+    return this.http.post(`${environment.rutaAPI + '/bdiDp/testBDIdpResp'}`, resp).pipe(
       map((response: any) => {
         return response;
       })
@@ -46,7 +47,7 @@ export class TestbaianService {
 
   DeleteResp(id:number) {
   
-    return this.http.delete(`${environment.rutaAPI + '/baiAn/deleteBAIanResp/'+id}`).pipe(
+    return this.http.delete(`${environment.rutaAPI + '/bdiDp/deleteBDIdpResp/'+id}`).pipe(
       map((response: any) => {
         return response;
       })

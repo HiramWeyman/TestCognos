@@ -3,261 +3,238 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { ActivatedRoute } from '@angular/router';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { RespTest } from 'src/app/interfaces/RespTest';
-import { InicioService } from 'src/app/services/inicio.service';
-import { NavbarService } from 'src/app/services/navbar.service';
+import { TestcreenciasService } from 'src/app/services/testcreencias.service';
 import Swal from 'sweetalert2';
-
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  selector: 'app-testcreencias',
+  templateUrl: './testcreencias.component.html',
+  styleUrls: ['./testcreencias.component.css']
 })
-export class InicioComponent {
+export class TestcreenciasComponent {
   @BlockUI()
   blockUI!: NgBlockUI;
   id!: number;
   preguntas!: any[];
   public modelArray: RespTest[] = [];
-  items = [
-    { groupName: 'groupA', value: '0', dessc: 'Nada' },
-    { groupName: 'groupA', value: '1', dessc: 'Poco' },
-    { groupName: 'groupA', value: '2', dessc: 'Bastante' },
-    { groupName: 'groupA', value: '3', dessc: 'Mucho' },
-    { groupName: 'groupA', value: '4', dessc: 'Extremadamente' },
-  ];
+
   form!: FormGroup;
   isFormSubmitted = false;
-  constructor(public nav: NavbarService, private route: ActivatedRoute, private _ini: InicioService, private fb: FormBuilder) { }
-
+  constructor(private route: ActivatedRoute, private _ini: TestcreenciasService, private fb: FormBuilder) { }
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
     this.cargarPreguntas();
-  }
-
-
-
-  /*  get f(){
-     console.log(this.form.controls);
-     return this.form.controls;
-   } */
-
-
-
-  submit() {
-    this.isFormSubmitted = true;
-    console.log('valid', this.form.valid);
-    if (!this.form.valid) {
-      console.log('Favor de contestar todas las preguntas!');
-      //this.submittedValue = undefined;
-      return false;
-    } else {
-      console.log(this.form.value);
-      console.log(this.form.get.length);
-      console.log(this.form.controls['pregunta_1'].value);
-      console.log(this.form.controls['respuesta_1'].value);
-      console.log(this.form.value.pregunta_2);
-      console.log(this.form.value.respuesta_2);
-
-      /*     console.log(this.form.);
-          console.log(this.form.pregunta_1.value); */
-      //enviar
-      return true;
-    }
-    //console.log(this.form.value);
   }
 
   cargarPreguntas() {
     this._ini.GetPreguntas().subscribe(
       res => {
         this.preguntas = res;
+        console.log(this.preguntas );
         for (let i = 0; i < this.preguntas.length; i++) {
 
           this.form = new FormGroup({
 
-            pregunta_1: new FormControl(this.preguntas[0].scl_id),
+            pregunta_1: new FormControl(this.preguntas[0].ellis_id),
             respuesta_1: new FormControl('', Validators.required),
-            pregunta_2: new FormControl(this.preguntas[1].scl_id),
+            pregunta_2: new FormControl(this.preguntas[1].ellis_id),
             respuesta_2: new FormControl('', Validators.required),
-            pregunta_3: new FormControl(this.preguntas[2].scl_id),
+            pregunta_3: new FormControl(this.preguntas[2].ellis_id),
             respuesta_3: new FormControl('', Validators.required),
-            pregunta_4: new FormControl(this.preguntas[3].scl_id),
+            pregunta_4: new FormControl(this.preguntas[3].ellis_id),
             respuesta_4: new FormControl('', Validators.required),
-            pregunta_5: new FormControl(this.preguntas[4].scl_id),
+            pregunta_5: new FormControl(this.preguntas[4].ellis_id),
             respuesta_5: new FormControl('', Validators.required),
-            pregunta_6: new FormControl(this.preguntas[5].scl_id),
+            pregunta_6: new FormControl(this.preguntas[5].ellis_id),
             respuesta_6: new FormControl('', Validators.required),
-            pregunta_7: new FormControl(this.preguntas[6].scl_id),
+            pregunta_7: new FormControl(this.preguntas[6].ellis_id),
             respuesta_7: new FormControl('', Validators.required),
-            pregunta_8: new FormControl(this.preguntas[7].scl_id),
+            pregunta_8: new FormControl(this.preguntas[7].ellis_id),
             respuesta_8: new FormControl('', Validators.required),
-            pregunta_9: new FormControl(this.preguntas[8].scl_id),
+            pregunta_9: new FormControl(this.preguntas[8].ellis_id),
             respuesta_9: new FormControl('', Validators.required),
-            pregunta_10: new FormControl(this.preguntas[9].scl_id),
+            pregunta_10: new FormControl(this.preguntas[9].ellis_id),
             respuesta_10: new FormControl('', Validators.required),
-            pregunta_11: new FormControl(this.preguntas[10].scl_id),
+            pregunta_11: new FormControl(this.preguntas[10].ellis_id),
             respuesta_11: new FormControl('', Validators.required),
-            pregunta_12: new FormControl(this.preguntas[11].scl_id),
+            pregunta_12: new FormControl(this.preguntas[11].ellis_id),
             respuesta_12: new FormControl('', Validators.required),
-            pregunta_13: new FormControl(this.preguntas[12].scl_id),
+            pregunta_13: new FormControl(this.preguntas[12].ellis_id),
             respuesta_13: new FormControl('', Validators.required),
-            pregunta_14: new FormControl(this.preguntas[13].scl_id),
+            pregunta_14: new FormControl(this.preguntas[13].ellis_id),
             respuesta_14: new FormControl('', Validators.required),
-            pregunta_15: new FormControl(this.preguntas[14].scl_id),
+            pregunta_15: new FormControl(this.preguntas[14].ellis_id),
             respuesta_15: new FormControl('', Validators.required),
-            pregunta_16: new FormControl(this.preguntas[15].scl_id),
+            pregunta_16: new FormControl(this.preguntas[15].ellis_id),
             respuesta_16: new FormControl('', Validators.required),
-            pregunta_17: new FormControl(this.preguntas[16].scl_id),
+            pregunta_17: new FormControl(this.preguntas[16].ellis_id),
             respuesta_17: new FormControl('', Validators.required),
-            pregunta_18: new FormControl(this.preguntas[17].scl_id),
+            pregunta_18: new FormControl(this.preguntas[17].ellis_id),
             respuesta_18: new FormControl('', Validators.required),
-            pregunta_19: new FormControl(this.preguntas[18].scl_id),
+            pregunta_19: new FormControl(this.preguntas[18].ellis_id),
             respuesta_19: new FormControl('', Validators.required),
-            pregunta_20: new FormControl(this.preguntas[19].scl_id),
+            pregunta_20: new FormControl(this.preguntas[19].ellis_id),
             respuesta_20: new FormControl('', Validators.required),
-            pregunta_21: new FormControl(this.preguntas[20].scl_id),
+            pregunta_21: new FormControl(this.preguntas[20].ellis_id),
             respuesta_21: new FormControl('', Validators.required),
-            pregunta_22: new FormControl(this.preguntas[21].scl_id),
+            pregunta_22: new FormControl(this.preguntas[21].ellis_id),
             respuesta_22: new FormControl('', Validators.required),
-            pregunta_23: new FormControl(this.preguntas[22].scl_id),
+            pregunta_23: new FormControl(this.preguntas[22].ellis_id),
             respuesta_23: new FormControl('', Validators.required),
-            pregunta_24: new FormControl(this.preguntas[23].scl_id),
+            pregunta_24: new FormControl(this.preguntas[23].ellis_id),
             respuesta_24: new FormControl('', Validators.required),
-            pregunta_25: new FormControl(this.preguntas[24].scl_id),
+            pregunta_25: new FormControl(this.preguntas[24].ellis_id),
             respuesta_25: new FormControl('', Validators.required),
-            pregunta_26: new FormControl(this.preguntas[25].scl_id),
+            pregunta_26: new FormControl(this.preguntas[25].ellis_id),
             respuesta_26: new FormControl('', Validators.required),
-            pregunta_27: new FormControl(this.preguntas[26].scl_id),
+            pregunta_27: new FormControl(this.preguntas[26].ellis_id),
             respuesta_27: new FormControl('', Validators.required),
-            pregunta_28: new FormControl(this.preguntas[27].scl_id),
+            pregunta_28: new FormControl(this.preguntas[27].ellis_id),
             respuesta_28: new FormControl('', Validators.required),
-            pregunta_29: new FormControl(this.preguntas[28].scl_id),
+            pregunta_29: new FormControl(this.preguntas[28].ellis_id),
             respuesta_29: new FormControl('', Validators.required),
-            pregunta_30: new FormControl(this.preguntas[29].scl_id),
+            pregunta_30: new FormControl(this.preguntas[29].ellis_id),
             respuesta_30: new FormControl('', Validators.required),
-            pregunta_31: new FormControl(this.preguntas[30].scl_id),
+            pregunta_31: new FormControl(this.preguntas[30].ellis_id),
             respuesta_31: new FormControl('', Validators.required),
-            pregunta_32: new FormControl(this.preguntas[31].scl_id),
+            pregunta_32: new FormControl(this.preguntas[31].ellis_id),
             respuesta_32: new FormControl('', Validators.required),
-            pregunta_33: new FormControl(this.preguntas[32].scl_id),
+            pregunta_33: new FormControl(this.preguntas[32].ellis_id),
             respuesta_33: new FormControl('', Validators.required),
-            pregunta_34: new FormControl(this.preguntas[33].scl_id),
+            pregunta_34: new FormControl(this.preguntas[33].ellis_id),
             respuesta_34: new FormControl('', Validators.required),
-            pregunta_35: new FormControl(this.preguntas[34].scl_id),
+            pregunta_35: new FormControl(this.preguntas[34].ellis_id),
             respuesta_35: new FormControl('', Validators.required),
-            pregunta_36: new FormControl(this.preguntas[35].scl_id),
+            pregunta_36: new FormControl(this.preguntas[35].ellis_id),
             respuesta_36: new FormControl('', Validators.required),
-            pregunta_37: new FormControl(this.preguntas[36].scl_id),
+            pregunta_37: new FormControl(this.preguntas[36].ellis_id),
             respuesta_37: new FormControl('', Validators.required),
-            pregunta_38: new FormControl(this.preguntas[37].scl_id),
+            pregunta_38: new FormControl(this.preguntas[37].ellis_id),
             respuesta_38: new FormControl('', Validators.required),
-            pregunta_39: new FormControl(this.preguntas[38].scl_id),
+            pregunta_39: new FormControl(this.preguntas[38].ellis_id),
             respuesta_39: new FormControl('', Validators.required),
-            pregunta_40: new FormControl(this.preguntas[39].scl_id),
+            pregunta_40: new FormControl(this.preguntas[39].ellis_id),
             respuesta_40: new FormControl('', Validators.required),
-            pregunta_41: new FormControl(this.preguntas[40].scl_id),
+            pregunta_41: new FormControl(this.preguntas[40].ellis_id),
             respuesta_41: new FormControl('', Validators.required),
-            pregunta_42: new FormControl(this.preguntas[41].scl_id),
+            pregunta_42: new FormControl(this.preguntas[41].ellis_id),
             respuesta_42: new FormControl('', Validators.required),
-            pregunta_43: new FormControl(this.preguntas[42].scl_id),
+            pregunta_43: new FormControl(this.preguntas[42].ellis_id),
             respuesta_43: new FormControl('', Validators.required),
-            pregunta_44: new FormControl(this.preguntas[43].scl_id),
+            pregunta_44: new FormControl(this.preguntas[43].ellis_id),
             respuesta_44: new FormControl('', Validators.required),
-            pregunta_45: new FormControl(this.preguntas[44].scl_id),
+            pregunta_45: new FormControl(this.preguntas[44].ellis_id),
             respuesta_45: new FormControl('', Validators.required),
-            pregunta_46: new FormControl(this.preguntas[45].scl_id),
+            pregunta_46: new FormControl(this.preguntas[45].ellis_id),
             respuesta_46: new FormControl('', Validators.required),
-            pregunta_47: new FormControl(this.preguntas[46].scl_id),
+            pregunta_47: new FormControl(this.preguntas[46].ellis_id),
             respuesta_47: new FormControl('', Validators.required),
-            pregunta_48: new FormControl(this.preguntas[47].scl_id),
+            pregunta_48: new FormControl(this.preguntas[47].ellis_id),
             respuesta_48: new FormControl('', Validators.required),
-            pregunta_49: new FormControl(this.preguntas[48].scl_id),
+            pregunta_49: new FormControl(this.preguntas[48].ellis_id),
             respuesta_49: new FormControl('', Validators.required),
-            pregunta_50: new FormControl(this.preguntas[49].scl_id),
+            pregunta_50: new FormControl(this.preguntas[49].ellis_id),
             respuesta_50: new FormControl('', Validators.required),
-            pregunta_51: new FormControl(this.preguntas[50].scl_id),
+            pregunta_51: new FormControl(this.preguntas[50].ellis_id),
             respuesta_51: new FormControl('', Validators.required),
-            pregunta_52: new FormControl(this.preguntas[51].scl_id),
+            pregunta_52: new FormControl(this.preguntas[51].ellis_id),
             respuesta_52: new FormControl('', Validators.required),
-            pregunta_53: new FormControl(this.preguntas[52].scl_id),
+            pregunta_53: new FormControl(this.preguntas[52].ellis_id),
             respuesta_53: new FormControl('', Validators.required),
-            pregunta_54: new FormControl(this.preguntas[53].scl_id),
+            pregunta_54: new FormControl(this.preguntas[53].ellis_id),
             respuesta_54: new FormControl('', Validators.required),
-            pregunta_55: new FormControl(this.preguntas[54].scl_id),
+            pregunta_55: new FormControl(this.preguntas[54].ellis_id),
             respuesta_55: new FormControl('', Validators.required),
-            pregunta_56: new FormControl(this.preguntas[55].scl_id),
+            pregunta_56: new FormControl(this.preguntas[55].ellis_id),
             respuesta_56: new FormControl('', Validators.required),
-            pregunta_57: new FormControl(this.preguntas[56].scl_id),
+            pregunta_57: new FormControl(this.preguntas[56].ellis_id),
             respuesta_57: new FormControl('', Validators.required),
-            pregunta_58: new FormControl(this.preguntas[57].scl_id),
+            pregunta_58: new FormControl(this.preguntas[57].ellis_id),
             respuesta_58: new FormControl('', Validators.required),
-            pregunta_59: new FormControl(this.preguntas[58].scl_id),
+            pregunta_59: new FormControl(this.preguntas[58].ellis_id),
             respuesta_59: new FormControl('', Validators.required),
-            pregunta_60: new FormControl(this.preguntas[59].scl_id),
+            pregunta_60: new FormControl(this.preguntas[59].ellis_id),
             respuesta_60: new FormControl('', Validators.required),
-            pregunta_61: new FormControl(this.preguntas[60].scl_id),
+            pregunta_61: new FormControl(this.preguntas[60].ellis_id),
             respuesta_61: new FormControl('', Validators.required),
-            pregunta_62: new FormControl(this.preguntas[61].scl_id),
+            pregunta_62: new FormControl(this.preguntas[61].ellis_id),
             respuesta_62: new FormControl('', Validators.required),
-            pregunta_63: new FormControl(this.preguntas[62].scl_id),
+            pregunta_63: new FormControl(this.preguntas[62].ellis_id),
             respuesta_63: new FormControl('', Validators.required),
-            pregunta_64: new FormControl(this.preguntas[63].scl_id),
+            pregunta_64: new FormControl(this.preguntas[63].ellis_id),
             respuesta_64: new FormControl('', Validators.required),
-            pregunta_65: new FormControl(this.preguntas[64].scl_id),
+            pregunta_65: new FormControl(this.preguntas[64].ellis_id),
             respuesta_65: new FormControl('', Validators.required),
-            pregunta_66: new FormControl(this.preguntas[65].scl_id),
+            pregunta_66: new FormControl(this.preguntas[65].ellis_id),
             respuesta_66: new FormControl('', Validators.required),
-            pregunta_67: new FormControl(this.preguntas[66].scl_id),
+            pregunta_67: new FormControl(this.preguntas[66].ellis_id),
             respuesta_67: new FormControl('', Validators.required),
-            pregunta_68: new FormControl(this.preguntas[67].scl_id),
+            pregunta_68: new FormControl(this.preguntas[67].ellis_id),
             respuesta_68: new FormControl('', Validators.required),
-            pregunta_69: new FormControl(this.preguntas[68].scl_id),
+            pregunta_69: new FormControl(this.preguntas[68].ellis_id),
             respuesta_69: new FormControl('', Validators.required),
-            pregunta_70: new FormControl(this.preguntas[69].scl_id),
+            pregunta_70: new FormControl(this.preguntas[69].ellis_id),
             respuesta_70: new FormControl('', Validators.required),
-            pregunta_71: new FormControl(this.preguntas[70].scl_id),
+            pregunta_71: new FormControl(this.preguntas[70].ellis_id),
             respuesta_71: new FormControl('', Validators.required),
-            pregunta_72: new FormControl(this.preguntas[71].scl_id),
+            pregunta_72: new FormControl(this.preguntas[71].ellis_id),
             respuesta_72: new FormControl('', Validators.required),
-            pregunta_73: new FormControl(this.preguntas[72].scl_id),
+            pregunta_73: new FormControl(this.preguntas[72].ellis_id),
             respuesta_73: new FormControl('', Validators.required),
-            pregunta_74: new FormControl(this.preguntas[73].scl_id),
+            pregunta_74: new FormControl(this.preguntas[73].ellis_id),
             respuesta_74: new FormControl('', Validators.required),
-            pregunta_75: new FormControl(this.preguntas[74].scl_id),
+            pregunta_75: new FormControl(this.preguntas[74].ellis_id),
             respuesta_75: new FormControl('', Validators.required),
-            pregunta_76: new FormControl(this.preguntas[75].scl_id),
+            pregunta_76: new FormControl(this.preguntas[75].ellis_id),
             respuesta_76: new FormControl('', Validators.required),
-            pregunta_77: new FormControl(this.preguntas[76].scl_id),
+            pregunta_77: new FormControl(this.preguntas[76].ellis_id),
             respuesta_77: new FormControl('', Validators.required),
-            pregunta_78: new FormControl(this.preguntas[77].scl_id),
+            pregunta_78: new FormControl(this.preguntas[77].ellis_id),
             respuesta_78: new FormControl('', Validators.required),
-            pregunta_79: new FormControl(this.preguntas[78].scl_id),
+            pregunta_79: new FormControl(this.preguntas[78].ellis_id),
             respuesta_79: new FormControl('', Validators.required),
-            pregunta_80: new FormControl(this.preguntas[79].scl_id),
+            pregunta_80: new FormControl(this.preguntas[79].ellis_id),
             respuesta_80: new FormControl('', Validators.required),
-            pregunta_81: new FormControl(this.preguntas[80].scl_id),
+            pregunta_81: new FormControl(this.preguntas[80].ellis_id),
             respuesta_81: new FormControl('', Validators.required),
-            pregunta_82: new FormControl(this.preguntas[81].scl_id),
+            pregunta_82: new FormControl(this.preguntas[81].ellis_id),
             respuesta_82: new FormControl('', Validators.required),
-            pregunta_83: new FormControl(this.preguntas[82].scl_id),
+            pregunta_83: new FormControl(this.preguntas[82].ellis_id),
             respuesta_83: new FormControl('', Validators.required),
-            pregunta_84: new FormControl(this.preguntas[83].scl_id),
+            pregunta_84: new FormControl(this.preguntas[83].ellis_id),
             respuesta_84: new FormControl('', Validators.required),
-            pregunta_85: new FormControl(this.preguntas[84].scl_id),
+            pregunta_85: new FormControl(this.preguntas[84].ellis_id),
             respuesta_85: new FormControl('', Validators.required),
-            pregunta_86: new FormControl(this.preguntas[85].scl_id),
+            pregunta_86: new FormControl(this.preguntas[85].ellis_id),
             respuesta_86: new FormControl('', Validators.required),
-            pregunta_87: new FormControl(this.preguntas[86].scl_id),
+            pregunta_87: new FormControl(this.preguntas[86].ellis_id),
             respuesta_87: new FormControl('', Validators.required),
-            pregunta_88: new FormControl(this.preguntas[87].scl_id),
+            pregunta_88: new FormControl(this.preguntas[87].ellis_id),
             respuesta_88: new FormControl('', Validators.required),
-            pregunta_89: new FormControl(this.preguntas[88].scl_id),
+            pregunta_89: new FormControl(this.preguntas[88].ellis_id),
             respuesta_89: new FormControl('', Validators.required),
-            pregunta_90: new FormControl(this.preguntas[89].scl_id),
-            respuesta_90: new FormControl('', Validators.required)
-
-
-
-
+            pregunta_90: new FormControl(this.preguntas[89].ellis_id),
+            respuesta_90: new FormControl('', Validators.required),
+            pregunta_91: new FormControl(this.preguntas[90].ellis_id),
+            respuesta_91: new FormControl('', Validators.required),
+            pregunta_92: new FormControl(this.preguntas[91].ellis_id),
+            respuesta_92: new FormControl('', Validators.required),
+            pregunta_93: new FormControl(this.preguntas[92].ellis_id),
+            respuesta_93: new FormControl('', Validators.required),
+            pregunta_94: new FormControl(this.preguntas[93].ellis_id),
+            respuesta_94: new FormControl('', Validators.required),
+            pregunta_95: new FormControl(this.preguntas[94].ellis_id),
+            respuesta_95: new FormControl('', Validators.required),
+            pregunta_96: new FormControl(this.preguntas[95].ellis_id),
+            respuesta_96: new FormControl('', Validators.required),
+            pregunta_97: new FormControl(this.preguntas[96].ellis_id),
+            respuesta_97: new FormControl('', Validators.required),
+            pregunta_98: new FormControl(this.preguntas[97].ellis_id),
+            respuesta_98: new FormControl('', Validators.required),
+            pregunta_99: new FormControl(this.preguntas[98].ellis_id),
+            respuesta_99: new FormControl('', Validators.required),
+            pregunta_100: new FormControl(this.preguntas[99].ellis_id),
+            respuesta_100: new FormControl('', Validators.required),
+            
 
           });
 
@@ -276,10 +253,6 @@ export class InicioComponent {
     return this.form.controls;
   }
 
-  DisableButton() {
-    this.form.controls['botonSubmit'].disable;
-  }
-  
   onSubmit({ value, valid }: { value: any, valid: boolean }) {
     /*  console.log(value, valid); */
     this.blockUI.start('Guardando...');
@@ -927,6 +900,76 @@ export class InicioComponent {
         res_id_paciente: this.id,
       });
 
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_91,
+        res_respuesta: Number(value.respuesta_91),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_92,
+        res_respuesta: Number(value.respuesta_92),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_93,
+        res_respuesta: Number(value.respuesta_93),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_94,
+        res_respuesta: Number(value.respuesta_94),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_95,
+        res_respuesta: Number(value.respuesta_95),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_96,
+        res_respuesta: Number(value.respuesta_96),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_97,
+        res_respuesta: Number(value.respuesta_97),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_98,
+        res_respuesta: Number(value.respuesta_98),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_99,
+        res_respuesta: Number(value.respuesta_99),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_100,
+        res_respuesta: Number(value.respuesta_100),
+        res_id_paciente: this.id,
+      });
+
       this._ini.DeleteResp(this.id).subscribe(del=>{
         if(del){
           this._ini.EnviarResp(this.modelArray).subscribe(usr => {
@@ -974,10 +1017,5 @@ export class InicioComponent {
 
 
   }
-
-  /*   get tituloNovalido(){
-      var i:number=0;
-      return this.form.get('respuesta_{{i+1}}').invalid && this.form.get('respuesta_{{i+1}}').touched
-    } */
 
 }

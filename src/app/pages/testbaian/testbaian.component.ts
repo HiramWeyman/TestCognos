@@ -5,7 +5,6 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { RespTest } from 'src/app/interfaces/RespTest';
 import { InicioService } from 'src/app/services/inicio.service';
 import { TestbaianService } from 'src/app/services/testbaian.service';
-
 import Swal from 'sweetalert2';
 
 @Component({
@@ -258,20 +257,33 @@ export class TestbaianComponent {
         res_id_paciente: this.id,
       });
 
-
-      this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+      this._ini.DeleteResp(this.id).subscribe(del=>{
+        if(del){
+          this._ini.EnviarResp(this.modelArray).subscribe(usr => {
    
-        if(usr){
-          this.blockUI.stop();
-          console.log(usr);
-          Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
-      
-          const btn = document.getElementById('btn') as HTMLButtonElement | null;
-          btn?.setAttribute('disabled', '');
+            if(usr){
+              this.blockUI.stop();
+              console.log(usr);
+              Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+          
+              const btn = document.getElementById('btn') as HTMLButtonElement | null;
+              btn?.setAttribute('disabled', '');
+            }
+    
+        },
+          error => {
+            console.log(error);
+            this.blockUI.stop();
+            Swal.fire({
+              title: 'ERROR!!!',
+              text: error.error.message,
+              icon: 'error'
+            });
+    
+          }); 
         }
-
-    },
-      error => {
+      },
+      error=>{
         console.log(error);
         this.blockUI.stop();
         Swal.fire({
@@ -279,17 +291,15 @@ export class TestbaianComponent {
           text: error.error.message,
           icon: 'error'
         });
+      });
 
-      }); 
+   
 
       const btn = document.getElementById('btn') as HTMLButtonElement | null;
       btn?.setAttribute('disabled', '');
 
       console.log(this.modelArray);
     }
-
-
-
 
   }
 

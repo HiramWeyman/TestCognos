@@ -1,0 +1,797 @@
+<br>
+<div class="container">
+    <div class="et_pb_text_inner">
+        <h1><span style="color: #000000;">Test BDI</span> <span style="color: #4646c4;"> Inventario de Depresión de
+                Beck</span></h1>
+    </div>
+    <div>
+        <p><b>
+                Instrucciones:
+
+                Este cuestionario está formado por 21 grupos de frases. Lea cada grupo de frases con cuidado y luego
+                elija una frase de cada grupo que describa de la mejor manera cómo se ha estado sintiendo durante las
+                dos semanas pasadas incluyendo hoy día. Circule el número a la izquierda de la frase que eligió. Si
+                varias frases del mismo grupo parecen aplicarse igual de bien, circule el número más alto entre esas
+                frases. Asegúrese de no circular más de una frase para cada grupo, incluyendo el ítem 16 (Cambios en el
+                Patrón de sueño) y el ítem 18 (Cambios en el Apetito).
+            </b></p>
+    </div>
+    <!--    novalidate (ngSubmit)="submit()"  -->
+    <form (ngSubmit)="onSubmit(form)">
+
+        <div [formGroup]="form" >
+            <div>
+                <label for="pregunta"><b>1.Tristeza</b></label>
+                <input type="hidden" name="pregunta_1" formControlName="pregunta_1">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_1" formControlName="respuesta_1" id="exampleRadios1" value="0. No me siento triste." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No me siento triste.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_1" formControlName="respuesta_1" id="exampleRadios2" value="1. Me siento triste parte del tiempo.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Me siento triste parte del tiempo.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_1" formControlName="respuesta_1" id="exampleRadios3" value="2. Me siento triste todo el tiempo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Me siento triste todo el tiempo.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_1" formControlName="respuesta_1" id="exampleRadios3" value="3. Estoy tan triste que no puedo soportarlo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Estoy tan triste que no puedo soportarlo.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>2.Pensamiento</b></label>
+                <input type="hidden" name="pregunta_2" formControlName="pregunta_2">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_2" formControlName="respuesta_2" id="exampleRadios1" value="0. No me siento desanimado con respecto a mí futuro." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No me siento desanimado con respecto a mí futuro.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_2" formControlName="respuesta_2" id="exampleRadios2" value="1. Me siento más desanimado sobre mi futuro de lo que usualmente estaba.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Me siento más desanimado sobre mi futuro de lo que usualmente estaba.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_2" formControlName="respuesta_2" id="exampleRadios3" value="2. No pienso que las cosas mejorarán para mí." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. No pienso que las cosas mejorarán para mí.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_2" formControlName="respuesta_2" id="exampleRadios3" value="3. No tengo esperanzas sobre mi futuro, creo que se pondrá peor." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. No tengo esperanzas sobre mi futuro, creo que se pondrá peor.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>3.Fracasos Pasados</b></label>
+                <input type="hidden" name="pregunta_3" formControlName="pregunta_3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_3" formControlName="respuesta_3" id="exampleRadios1" value="0. No me siento que he fracasado." >
+                    <label class="form-check-label" for="exampleRadios1">
+                      0. No me siento que he fracasado.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_3" formControlName="respuesta_3" id="exampleRadios2" value="1. He fracasado más de lo que debí.">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1. He fracasado más de lo que debí.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_3" formControlName="respuesta_3" id="exampleRadios3" value="2. Cuando miro mi pasado he tenido muchos fracasos." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      2. Cuando miro mi pasado he tenido muchos fracasos.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_3" formControlName="respuesta_3" id="exampleRadios3" value="3. Pienso que soy un fracaso total como persona." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      3. Pienso que soy un fracaso total como persona.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>4.Pérdida de Placer</b></label>
+                <input type="hidden" name="pregunta_4" formControlName="pregunta_4">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_4" formControlName="respuesta_4" id="exampleRadios1" value="0. Disfruto igual que antes de las cosas que me gustan hacer" >
+                    <label class="form-check-label" for="exampleRadios1">
+                      0. Disfruto igual que antes de las cosas que me gustan hacer
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_4" formControlName="respuesta_4" id="exampleRadios2" value="1. No disfruto las cosas tanto como antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1. No disfruto las cosas tanto como antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_4" formControlName="respuesta_4" id="exampleRadios3" value="2. Disfruto muy poco de las cosas que antes me gustaban" >
+                    <label class="form-check-label" for="exampleRadios3">
+                      2. Disfruto muy poco de las cosas que antes me gustaban
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_4" formControlName="respuesta_4" id="exampleRadios3" value="3. No puedo disfrutar de las cosas que antes disfrutaba." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      3. No puedo disfrutar de las cosas que antes disfrutaba.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>5.Sentimientos de Culpa</b></label>
+                <input type="hidden" name="pregunta_5" formControlName="pregunta_5">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_5" formControlName="respuesta_5" id="exampleRadios1" value="0. No me siento culpable" >
+                    <label class="form-check-label" for="exampleRadios1">
+                      0. No me siento culpable
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_5" formControlName="respuesta_5" id="exampleRadios2" value="1. Me siento culpable de muchas cosas que hice o debí hacer.">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1. Me siento culpable de muchas cosas que hice o debí hacer.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_5" formControlName="respuesta_5" id="exampleRadios3" value="2. Me siento culpable la mayor parte del tiempo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      2. Me siento culpable la mayor parte del tiempo.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_5" formControlName="respuesta_5" id="exampleRadios3" value="3. Me siento culpable todo el tiempo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      3. Me siento culpable todo el tiempo.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>6.Sentimientos de Castigo</b></label>
+                <input type="hidden" name="pregunta_6" formControlName="pregunta_6">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_6" formControlName="respuesta_6" id="exampleRadios1" value="0. No siento que estoy siendo castigado." >
+                    <label class="form-check-label" for="exampleRadios1">
+                      0. No siento que estoy siendo castigado.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_6" formControlName="respuesta_6" id="exampleRadios2" value="1. Siento que puedo estar siendo castigado.">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1. Siento que puedo estar siendo castigado.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_6" formControlName="respuesta_6" id="exampleRadios3" value="2. Se que seré castigado." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      2. Se que seré castigado.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_6" formControlName="respuesta_6" id="exampleRadios3" value="3. Siento que estoy siendo castigado" >
+                    <label class="form-check-label" for="exampleRadios3">
+                      3. Siento que estoy siendo castigado
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>7.Auto- Disgusto</b></label>
+                <input type="hidden" name="pregunta_7" formControlName="pregunta_7">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_7" formControlName="respuesta_7" id="exampleRadios1" value="0. Me siento igual sobre mí mismo(a) que siempre." >
+                    <label class="form-check-label" for="exampleRadios1">
+                      0. Me siento igual sobre mí mismo(a) que siempre.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_7" formControlName="respuesta_7" id="exampleRadios2" value="1. He perdido confianza en mí.">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1. He perdido confianza en mí.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_7" formControlName="respuesta_7" id="exampleRadios3" value="2. Estoy decepcionado(a) de mí." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      2. Estoy decepcionado(a) de mí.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_7" formControlName="respuesta_7" id="exampleRadios3" value="3. No me gusto." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      3. No me gusto.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>8.Auto-Criticismo</b></label>
+                <input type="hidden" name="pregunta_8" formControlName="pregunta_8">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_8" formControlName="respuesta_8" id="exampleRadios1" value="0. No me critico o no me culpo más que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                      0. No me critico o no me culpo más que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_8" formControlName="respuesta_8" id="exampleRadios2" value="1. Soy más crítico de mí de lo que solía ser.">
+                    <label class="form-check-label" for="exampleRadios2">
+                      1. Soy más crítico de mí de lo que solía ser.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_8" formControlName="respuesta_8" id="exampleRadios3" value="2. Me critico por todos mis errores." >
+                    <label class="form-check-label" for="exampleRadios3">
+                      2. Me critico por todos mis errores.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_8" formControlName="respuesta_8" id="exampleRadios3" value="3. Me culpo de todas las cosas malas que suceden." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Me culpo de todas las cosas malas que suceden.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>9.Pensamientos o Deseos Suicidas</b></label>
+                <input type="hidden" name="pregunta_9" formControlName="pregunta_9">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_9" formControlName="respuesta_9" id="exampleRadios1" value="0. No tengo pensamientos de suicidarme." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No tengo pensamientos de suicidarme.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_9" formControlName="respuesta_9" id="exampleRadios2" value="1. Tengo pensamientos de suicidarme, pero no lo llevaría a cabo.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Tengo pensamientos de suicidarme, pero no lo llevaría a cabo.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_9" formControlName="respuesta_9" id="exampleRadios3" value="2. Me gustaría matarme." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Me gustaría matarme.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_9" formControlName="respuesta_9" id="exampleRadios3" value="3. Me mataría si tuviera la oportunidad." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Me mataría si tuviera la oportunidad.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>10.Llanto</b></label>
+                <input type="hidden" name="pregunta_10" formControlName="pregunta_10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_10" formControlName="respuesta_10" id="exampleRadios1" value="0. No lloro más que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No lloro más que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_10" formControlName="respuesta_10" id="exampleRadios2" value="1. Lloro más que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Lloro más que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_10" formControlName="respuesta_10" id="exampleRadios3" value="2. Lloro por cosas pequeñas." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Lloro por cosas pequeñas.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_10" formControlName="respuesta_10" id="exampleRadios3" value="3. Quiero llorar pero no puedo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Quiero llorar pero no puedo.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>11.Agitación</b></label>
+                <input type="hidden" name="pregunta_11" formControlName="pregunta_11">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_11" formControlName="respuesta_11" id="exampleRadios1" value="0. No estoy más inquieto(a) que lo usual." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No estoy más inquieto(a) que lo usual.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_11" formControlName="respuesta_11" id="exampleRadios2" value="1. Me siento más inquieto(a) que lo usual.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Me siento más inquieto(a) que lo usual.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_11" formControlName="respuesta_11" id="exampleRadios3" value="2. Estoy tan inquieto(a) y agitado(a) que me es difícil mantenerme sentado." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Estoy tan inquieto(a) y agitado(a) que me es difícil mantenerme sentado.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_11" formControlName="respuesta_11" id="exampleRadios3" value="3. Estoy tan inquieto(a) y agitado(a) que debo mantenerme moviéndome o haciendo algo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Estoy tan inquieto(a) y agitado(a) que debo mantenerme moviéndome o haciendo algo.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>12.Pérdida de interés</b></label>
+                <input type="hidden" name="pregunta_12" formControlName="pregunta_12">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_12" formControlName="respuesta_12" id="exampleRadios1" value="0. He perdido en interés en otras personas o actividades." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. He perdido en interés en otras personas o actividades.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_12" formControlName="respuesta_12" id="exampleRadios2" value="1. Estoy menos interesado en otras personas o actividades que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Estoy menos interesado en otras personas o actividades que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_12" formControlName="respuesta_12" id="exampleRadios3" value="2. He perdido la mayoría de mi interés en las otras personas o cosas." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. He perdido la mayoría de mi interés en las otras personas o cosas.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_12" formControlName="respuesta_12" id="exampleRadios3" value="3. Me es difícil interesarme por algo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                       3. Me es difícil interesarme por algo.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>13.Indecisión</b></label>
+                <input type="hidden" name="pregunta_13" formControlName="pregunta_13">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_13" formControlName="respuesta_13" id="exampleRadios1" value="0. Tomar decisiones me es igual de fácil que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. Tomar decisiones me es igual de fácil que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_13" formControlName="respuesta_13" id="exampleRadios2" value="1. Me es más difícil tomar decisiones que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Me es más difícil tomar decisiones que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_13" formControlName="respuesta_13" id="exampleRadios3" value="2. Tengo mucha más dificultad para tomar decisiones que antes." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Tengo mucha más dificultad para tomar decisiones que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_13" formControlName="respuesta_13" id="exampleRadios3" value="3. Tengo problemas para tomar decisiones." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Tengo problemas para tomar decisiones.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>14.Sentimientos de Valía</b></label>
+                <input type="hidden" name="pregunta_14" formControlName="pregunta_14">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_14" formControlName="respuesta_14" id="exampleRadios1" value="0. No siento que no tengo valor como persona." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No siento que no tengo valor como persona.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_14" formControlName="respuesta_14" id="exampleRadios2" value="1. No me considero tan valioso como antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. No me considero tan valioso como antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_14" formControlName="respuesta_14" id="exampleRadios3" value="2. Me siento poco valioso comparado con otras personas." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Me siento poco valioso comparado con otras personas.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_14" formControlName="respuesta_14" id="exampleRadios3" value="3. Me siento muy poco valioso." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Me siento muy poco valioso.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>15.Pérdida de Energía</b></label>
+                <input type="hidden" name="pregunta_15" formControlName="pregunta_15">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_15" formControlName="respuesta_15" id="exampleRadios1" value="0. Tengo tanta energía como siempre." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. Tengo tanta energía como siempre.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_15" formControlName="respuesta_15" id="exampleRadios2" value="1. Tengo menos energía que lo que solía tener.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Tengo menos energía que lo que solía tener.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_15" formControlName="respuesta_15" id="exampleRadios3" value="2. No tengo suficiente energía para hacer varias cosas." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. No tengo suficiente energía para hacer varias cosas.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_15" formControlName="respuesta_15" id="exampleRadios3" value="3. No tengo energía para hacer nada." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. No tengo energía para hacer nada.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>16.Cambio en el Patrón del Sueño</b></label>
+                <input type="hidden" name="pregunta_16" formControlName="pregunta_16">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_16" formControlName="respuesta_16" id="exampleRadios1" value="0. No he notado cambios en mi patrón de sueño." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No he notado cambios en mi patrón de sueño.
+                    </label>
+                  </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_16" formControlName="respuesta_16" id="exampleRadios1" value="1ª Duermo más que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        1ª Duermo más que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_16" formControlName="respuesta_16" id="exampleRadios1" value="1b Duermo menos que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        1b Duermo menos que antes.
+                    </label>
+                  </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_16" formControlName="respuesta_16" id="exampleRadios1" value="2ª Duermo mucho más que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        2ª Duermo mucho más que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_16" formControlName="respuesta_16" id="exampleRadios2" value="2b Duermo mucho menos que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        2b Duermo mucho menos que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_16" formControlName="respuesta_16" id="exampleRadios3" value="3ª Duermo la mayor parte del día" >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3ª Duermo la mayor parte del día
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_16" formControlName="respuesta_16" id="exampleRadios3" value="3b Me levanto 1 ó 2 horas temprano y no puedo volverme a dormir." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3b Me levanto 1 ó 2 horas temprano y no puedo volverme a dormir.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>17.Irritabilidad</b></label>
+                <input type="hidden" name="pregunta_17" formControlName="pregunta_17">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_17" formControlName="respuesta_17" id="exampleRadios1" value="0. No estoy más irritable que lo usual." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No estoy más irritable que lo usual.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_17" formControlName="respuesta_17" id="exampleRadios2" value="1. Estoy más irritable que lo usual.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Estoy más irritable que lo usual.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_17" formControlName="respuesta_17" id="exampleRadios3" value="2. Estoy mucho más irritable que lo normal." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Estoy mucho más irritable que lo normal.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_17" formControlName="respuesta_17" id="exampleRadios3" value="3. Estoy irritable todo el tiempo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Estoy irritable todo el tiempo.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>18.Cambios en el Apetito</b></label>
+                <input type="hidden" name="pregunta_18" formControlName="pregunta_18">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_18" formControlName="respuesta_18" id="exampleRadios2" value="0 No he experimentado ningún cambio en mi apetito.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        0 No he experimentado ningún cambio en mi apetito.
+                    </label>
+                  </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_18" formControlName="respuesta_18" id="exampleRadios2" value="1ª Mi apetito es algo menor que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1ª Mi apetito es algo menor que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_18" formControlName="respuesta_18" id="exampleRadios2" value="1b Mi apetito es algo mayor que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1b Mi apetito es algo mayor que antes.
+                    </label>
+                  </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_18" formControlName="respuesta_18" id="exampleRadios1" value="2ª Mi apetito es mucho menor que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        2ª Mi apetito es mucho menor que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_18" formControlName="respuesta_18" id="exampleRadios2" value="2b Mi apetito es mucho mayor que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        2b Mi apetito es mucho mayor que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_18" formControlName="respuesta_18" id="exampleRadios3" value="3ª No tengo apetito en ningún momento." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3ª No tengo apetito en ningún momento.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_18" formControlName="respuesta_18" id="exampleRadios3" value="3b Tengo apetito todo el tiempo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3b Tengo apetito todo el tiempo.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>19.Dificultades en la concentración</b></label>
+                <input type="hidden" name="pregunta_19" formControlName="pregunta_19">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_19" formControlName="respuesta_19" id="exampleRadios1" value="0. Puedo concentrarme tan bien como siempre" >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. Puedo concentrarme tan bien como siempre
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_19" formControlName="respuesta_19" id="exampleRadios2" value="1. No me concentro tan bien como antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. No me concentro tan bien como antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_19" formControlName="respuesta_19" id="exampleRadios3" value="2. Me cuesta mantener mi mente en algo por mucho tiempo." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Me cuesta mantener mi mente en algo por mucho tiempo.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_19" formControlName="respuesta_19" id="exampleRadios3" value="3. Me es difícil concentrarme en cualquier cosa" >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Me es difícil concentrarme en cualquier cosa
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>20.Cansancio o Fatiga</b></label>
+                <input type="hidden" name="pregunta_20" formControlName="pregunta_20">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_20" formControlName="respuesta_20" id="exampleRadios1" value="0. No estoy más cansado que antes." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No estoy más cansado que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_20" formControlName="respuesta_20" id="exampleRadios2" value="1. Me canso con más facilidad que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Me canso con más facilidad que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_20" formControlName="respuesta_20" id="exampleRadios3" value="2. Estoy muy cansado para hacer muchas cosas que antes hacía." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Estoy muy cansado para hacer muchas cosas que antes hacía.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_20" formControlName="respuesta_20" id="exampleRadios3" value="3. Estoy muy cansado para hacer la mayoría de cosas que antes hacía." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. Estoy muy cansado para hacer la mayoría de cosas que antes hacía.
+                    </label>
+                  </div>
+            </div>
+
+            <div>
+                <label for="pregunta"><b>21.Perdida de Interés en el sexo</b></label>
+                <input type="hidden" name="pregunta_21" formControlName="pregunta_21">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_21" formControlName="respuesta_21" id="exampleRadios1" value="0. No he notado ningún cambio en mi interés por el sexo." >
+                    <label class="form-check-label" for="exampleRadios1">
+                        0. No he notado ningún cambio en mi interés por el sexo.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_21" formControlName="respuesta_21" id="exampleRadios2" value="1. Estoy menos interesado (a) en el sexo que antes.">
+                    <label class="form-check-label" for="exampleRadios2">
+                        1. Estoy menos interesado (a) en el sexo que antes.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_21" formControlName="respuesta_21" id="exampleRadios3" value="2. Estoy mucho menos interesado (a) en el sexo ahora." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        2. Estoy mucho menos interesado (a) en el sexo ahora.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="respuesta_21" formControlName="respuesta_21" id="exampleRadios3" value="3. He perdido el interés por el sexo completamente." >
+                    <label class="form-check-label" for="exampleRadios3">
+                        3. He perdido el interés por el sexo completamente.
+                    </label>
+                  </div>
+            </div>
+
+
+        </div>
+
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_1'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_1'].errors?.['required']">Ingrese una Respuesta a la pregunta 1.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_2'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_2'].errors?.['required']">Ingrese una Respuesta a la pregunta 2.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_3'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_3'].errors?.['required']">Ingrese una Respuesta a la pregunta 3.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_4'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_4'].errors?.['required']">Ingrese una Respuesta a la pregunta 4.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_5'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_5'].errors?.['required']">Ingrese una Respuesta a la pregunta 5.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_6'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_6'].errors?.['required']">Ingrese una Respuesta a la pregunta 6.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_7'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_7'].errors?.['required']">Ingrese una Respuesta a la pregunta 7.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_8'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_8'].errors?.['required']">Ingrese una Respuesta a la pregunta 8.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_9'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_9'].errors?.['required']">Ingrese una Respuesta a la pregunta 9.</div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_10'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_10'].errors?.['required']">Ingrese una Respuesta a la pregunta 10.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_11'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_11'].errors?.['required']">Ingrese una Respuesta a la pregunta 11.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_12'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_12'].errors?.['required']">Ingrese una Respuesta a la pregunta 12.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_13'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_13'].errors?.['required']">Ingrese una Respuesta a la pregunta 13.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_14'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_14'].errors?.['required']">Ingrese una Respuesta a la pregunta 14.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_15'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_15'].errors?.['required']">Ingrese una Respuesta a la pregunta 15.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_16'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_16'].errors?.['required']">Ingrese una Respuesta a la pregunta 16.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_17'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_17'].errors?.['required']">Ingrese una Respuesta a la pregunta 17.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_18'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_18'].errors?.['required']">Ingrese una Respuesta a la pregunta 18.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_19'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_19'].errors?.['required']">Ingrese una Respuesta a la pregunta 19.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_20'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_20'].errors?.['required']">Ingrese una Respuesta a la pregunta 20.
+            </div>
+        </div>
+
+        <div *ngIf="(isFormSubmitted) && (form.controls['respuesta_21'].invalid) " class="alert alert-danger"
+            role="alert">
+            <div *ngIf=" form.controls['respuesta_21'].errors?.['required']">Ingrese una Respuesta a la pregunta 21.
+            </div>
+        </div>
+
+
+
+        <button type="submit" id="btn" class="btn btn-primary" expand="block">Enviar Respuestas</button>
+    </form>
+</div>
+<!-- <div class="ae-container-fluid ae-container-fluid--inner rk-main">
+    <br>
+  
+  </div> -->

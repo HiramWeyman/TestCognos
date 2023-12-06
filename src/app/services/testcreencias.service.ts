@@ -14,7 +14,7 @@ import {  RespTest } from '../interfaces/RespTest';
 @Injectable({
   providedIn: 'root'
 })
-export class TestbaianService {
+export class TestcreenciasService {
 
   constructor(private http: HttpClient) { }
 
@@ -25,7 +25,7 @@ export class TestbaianService {
   } */
 
   GetPreguntas(): Observable<any[]> {
-    return this.http.get(`${environment.rutaAPI}` + '/baiAn/testBAIan').pipe(
+    return this.http.get(`${environment.rutaAPI}` + '/ellis/testEllis').pipe(
       map(response => response as any[])
     );
   }
@@ -36,7 +36,7 @@ export class TestbaianService {
     console.log(resp);
 
     //return this.http.post<Usuarios>(this.urlEndPoint + '/tusuarios/'+login.user+'/'+login.password, login).pipe(
-    return this.http.post(`${environment.rutaAPI + '/baiAn/testBAIanResp'}`, resp).pipe(
+    return this.http.post(`${environment.rutaAPI + '/ellis/testEllisResp'}`, resp).pipe(
       map((response: any) => {
         return response;
       })
@@ -46,7 +46,7 @@ export class TestbaianService {
 
   DeleteResp(id:number) {
   
-    return this.http.delete(`${environment.rutaAPI + '/baiAn/deleteBAIanResp/'+id}`).pipe(
+    return this.http.delete(`${environment.rutaAPI + '/ellis/deleteEllisResp/'+id}`).pipe(
       map((response: any) => {
         return response;
       })
