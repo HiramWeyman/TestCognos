@@ -45,6 +45,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TestbaianComponent } from './pages/testbaian/testbaian.component';
 import { TestbdidpComponent } from './pages/testbdidp/testbdidp.component';
 import { TestcreenciasComponent } from './pages/testcreencias/testcreencias.component';
+import { TestscidComponent } from './pages/testscid/testscid.component';
 
 
 
@@ -76,7 +77,8 @@ import { TestcreenciasComponent } from './pages/testcreencias/testcreencias.comp
     PonenciasComponent,
     TestbaianComponent,
     TestbdidpComponent,
-    TestcreenciasComponent
+    TestcreenciasComponent,
+    TestscidComponent
 
   ],
   imports: [

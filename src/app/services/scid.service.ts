@@ -14,7 +14,7 @@ import {  RespTest } from '../interfaces/RespTest';
 @Injectable({
   providedIn: 'root'
 })
-export class InicioService {
+export class scidService {
 
   constructor(private http: HttpClient) { }
 
@@ -25,7 +25,7 @@ export class InicioService {
   } */
 
   GetPreguntas(): Observable<any[]> {
-    return this.http.get(`${environment.rutaAPI}` + '/scl/testSCL').pipe(
+    return this.http.get(`${environment.rutaAPI}` + '/scid/TestSCID').pipe(
       map(response => response as any[])
     );
   }
@@ -36,7 +36,7 @@ export class InicioService {
     console.log(resp);
 
     //return this.http.post<Usuarios>(this.urlEndPoint + '/tusuarios/'+login.user+'/'+login.password, login).pipe(
-    return this.http.post(`${environment.rutaAPI + '/scl/testSCLResp'}`, resp).pipe(
+    return this.http.post(`${environment.rutaAPI + '/scid/TestSCIDResp'}`, resp).pipe(
       map((response: any) => {
         return response;
       })
@@ -46,7 +46,7 @@ export class InicioService {
 
   DeleteResp(id:number) {
   
-    return this.http.delete(`${environment.rutaAPI + '/scl/deleteSCLResp/'+id}`).pipe(
+    return this.http.delete(`${environment.rutaAPI + '/scid/deleteSCIDResp/'+id}`).pipe(
       map((response: any) => {
         return response;
       })

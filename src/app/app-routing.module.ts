@@ -22,7 +22,7 @@ import { PonenciasComponent } from './pages/ponencias/ponencias.component';
 import { TestbaianComponent } from './pages/testbaian/testbaian.component';
 import { TestbdidpComponent } from './pages/testbdidp/testbdidp.component';
 import { TestcreenciasComponent } from './pages/testcreencias/testcreencias.component';
-
+import { TestscidComponent } from './pages/testscid/testscid.component';
 
 
 const routes: Routes = [
@@ -31,6 +31,8 @@ const routes: Routes = [
 {path:'testbaian/:id',component:TestbaianComponent},
 {path:'testbdidp/:id',component:TestbdidpComponent},
 {path:'testcreencias/:id',component:TestcreenciasComponent},
+{path:'testscid/:id',component:TestscidComponent},
+
 {path:'registro',component:RegistroComponent},
 {path:'about',component:AboutComponent},
 {path:'contacto',component:ContactoComponent},
