@@ -1,0 +1,2008 @@
+<br>
+<h1>M</h1><br>
+<div class="tableFixHead">
+    <table class="table table-bordered" style="font-size: 12px;">
+        <thead>
+            <tr>
+                <th>SITUACIONES</th>
+                <th>Lloro con facilidad.</th>
+                <th>Realizo movimientos repetitivos con alguna parte de mi cuerpo (rascarme, tocarme, movimientos rítmicos con pies o manos, etc.).</th>
+                <th>Fumo, como o bebo demasiado.</th>
+                <th>Trato de evitar o rehuír la situación.</th>
+                <th>Me muevo y hago cosas sin una finalidad concreta.</th>
+                <th>Quedo paralizado o mis movimientos son torpes.</th>
+                <th>Tartamudeo o tengo otras dificultades de expresión verbal.</th>
+                <th>Observaciones</th>
+                <th>ΣS</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>1. Ante un examen en el que me juego mucho, o si voy a ser entrevistado para un
+                            trabajo importante.</b>
+                    </label>
+                    <input type="hidden" name="pregunta_1c" [(ngModel)]="testM.pregunta_1m" value="1">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_1m_1" (change)="sum_pregunta1()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_1m_2" (change)="sum_pregunta1()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_1m_3" (change)="sum_pregunta1()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_1m_4" (change)="sum_pregunta1()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_1m_5" (change)="sum_pregunta1()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_1m_6" (change)="sum_pregunta1()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_1m_7" (change)="sum_pregunta1()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_1m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_1m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>2. Cuando voy a llegar tarde a una cita. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_2c" [(ngModel)]="testM.pregunta_2m" value="2">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_2m_1" (change)="sum_pregunta2()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_2m_2" (change)="sum_pregunta2()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_2m_3" (change)="sum_pregunta2()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_2m_4" (change)="sum_pregunta2()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_2m_5" (change)="sum_pregunta2()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_2m_6" (change)="sum_pregunta2()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_2m_7" (change)="sum_pregunta2()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_2m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_2m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>3. Cuando pienso en las muchas cosas que tengo que hacer. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_3c" [(ngModel)]="testM.pregunta_3m" value="3">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_3m_1" (change)="sum_pregunta3()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_3m_2" (change)="sum_pregunta3()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_3m_3" (change)="sum_pregunta3()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_3m_4" (change)="sum_pregunta3()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_3m_5" (change)="sum_pregunta3()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_3m_6" (change)="sum_pregunta3()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_3m_7" (change)="sum_pregunta3()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_3m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_3m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>4. A la hora de tomar una decisión o resolver un problema difícil. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_1c" [(ngModel)]="testM.pregunta_4m" value="4">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_4m_1" (change)="sum_pregunta4()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_4m_2" (change)="sum_pregunta4()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_4m_3" (change)="sum_pregunta4()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_4m_4" (change)="sum_pregunta4()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_4m_5" (change)="sum_pregunta4()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_4m_6" (change)="sum_pregunta4()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_4m_7" (change)="sum_pregunta4()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_4m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_4m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>5. En mi trabajo o cuando estudio.</b>
+                    </label>
+                    <input type="hidden" name="pregunta_5c" [(ngModel)]="testM.pregunta_5m" value="5">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_5m_1" (change)="sum_pregunta5()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_5m_2" (change)="sum_pregunta5()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_5m_3" (change)="sum_pregunta5()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_5m_4" (change)="sum_pregunta5()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_5m_5" (change)="sum_pregunta5()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_5m_6" (change)="sum_pregunta5()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_5m_7" (change)="sum_pregunta5()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_5m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_5m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>6. Cuando espero a alguien en un lugar concurrido. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_6c" [(ngModel)]="testM.pregunta_6m" value="6">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_6m_1" (change)="sum_pregunta6()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_6m_2" (change)="sum_pregunta6()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_6m_3" (change)="sum_pregunta6()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_6m_4" (change)="sum_pregunta6()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_6m_5" (change)="sum_pregunta6()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_6m_6" (change)="sum_pregunta6()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_6m_7" (change)="sum_pregunta6()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_6m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_6m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>7. Si una persona del otro sexo está muy cerca de mí, rozándome, o si estoy en una
+                            situación sexual íntima. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_7c" [(ngModel)]="testM.pregunta_7m" value="7">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_7m_1" (change)="sum_pregunta7()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_7m_2" (change)="sum_pregunta7()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_7m_3" (change)="sum_pregunta7()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_7m_4" (change)="sum_pregunta7()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_7m_5" (change)="sum_pregunta7()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_7m_6" (change)="sum_pregunta7()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_7m_7" (change)="sum_pregunta7()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_7m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_7m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>8. Cuando alguien me molesta o cuando discuto. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_8c" [(ngModel)]="testM.pregunta_8m" value="8">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_8m_1" (change)="sum_pregunta8()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_8m_2" (change)="sum_pregunta8()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_8m_3" (change)="sum_pregunta8()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_8m_4" (change)="sum_pregunta8()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_8m_5" (change)="sum_pregunta8()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_8m_6" (change)="sum_pregunta8()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_8m_7" (change)="sum_pregunta8()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_8m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_8m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>9. Cuando soy observado o mi trabajo es supervisado, cuando recibo críticas, o
+                            siempre que pueda ser evaluado negativamente</b>
+                    </label>
+                    <input type="hidden" name="pregunta_9c" [(ngModel)]="testM.pregunta_9m" value="9">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_9m_1" (change)="sum_pregunta9()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_9m_2" (change)="sum_pregunta9()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_9m_3" (change)="sum_pregunta9()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_9m_4" (change)="sum_pregunta9()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_9m_5" (change)="sum_pregunta9()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_9m_6" (change)="sum_pregunta9()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_9m_7" (change)="sum_pregunta9()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_9m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_9m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>1O. Si tengo que hablar en público. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_10c" [(ngModel)]="testM.pregunta_10m" value="10">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_10m_1" (change)="sum_pregunta10()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_10m_2" (change)="sum_pregunta10()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_10m_3" (change)="sum_pregunta10()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_10m_4" (change)="sum_pregunta10()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_10m_5" (change)="sum_pregunta10()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_10m_6" (change)="sum_pregunta10()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_10m_7" (change)="sum_pregunta10()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_10m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_10m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>11. Cuando pienso en experiencias recientes en las que me he sentido ridículo,
+                            tímido, humillado, solo o rechazado. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_11c" [(ngModel)]="testM.pregunta_11m" value="11">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_11m_1" (change)="sum_pregunta11()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_11m_2" (change)="sum_pregunta11()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_11m_3" (change)="sum_pregunta11()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_11m_4" (change)="sum_pregunta11()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_11m_5" (change)="sum_pregunta11()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_11m_6" (change)="sum_pregunta11()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_11m_7" (change)="sum_pregunta11()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_11m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_11m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>12. Cuando tengo que viajar en avión o en barco. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_12c" [(ngModel)]="testM.pregunta_12m" value="12">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_12m_1" (change)="sum_pregunta12()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_12m_2" (change)="sum_pregunta12()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_12m_3" (change)="sum_pregunta12()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_12m_4" (change)="sum_pregunta12()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_12m_5" (change)="sum_pregunta12()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_12m_6" (change)="sum_pregunta12()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_12m_7" (change)="sum_pregunta12()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_12m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_12m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>13. Después de haber cometido algún error. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_13c" [(ngModel)]="testM.pregunta_13m" value="13">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_13m_1" (change)="sum_pregunta13()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_13m_2" (change)="sum_pregunta13()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_13m_3" (change)="sum_pregunta13()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_13m_4" (change)="sum_pregunta13()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_13m_5" (change)="sum_pregunta13()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_13m_6" (change)="sum_pregunta13()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_13m_7" (change)="sum_pregunta13()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_13m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_13m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>14. Ante la consulta del dentista, las inyecciones, las heridas o la sangre. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_14c" [(ngModel)]="testM.pregunta_14m" value="14">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_14m_1" (change)="sum_pregunta14()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_14m_2" (change)="sum_pregunta14()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_14m_3" (change)="sum_pregunta14()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_14m_4" (change)="sum_pregunta14()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_14m_5" (change)="sum_pregunta14()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_14m_6" (change)="sum_pregunta14()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_14m_7" (change)="sum_pregunta14()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_14m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_14m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>15. Cuando voy a una cita con una persona del otro sexo. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_15c" [(ngModel)]="testM.pregunta_15m" value="15">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_15m_1" (change)="sum_pregunta15()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_15m_2" (change)="sum_pregunta15()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_15m_3" (change)="sum_pregunta15()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_15m_4" (change)="sum_pregunta15()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_15m_5" (change)="sum_pregunta15()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_15m_6" (change)="sum_pregunta15()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_15m_7" (change)="sum_pregunta15()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_15m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_15m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>16. Cuando pienso en mi futuro o en dificultades y problemas futuros.</b>
+                    </label>
+                    <input type="hidden" name="pregunta_16c" [(ngModel)]="testM.pregunta_16m" value="16">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_16m_1" (change)="sum_pregunta16()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_16m_2" (change)="sum_pregunta16()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_16m_3" (change)="sum_pregunta16()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_16m_4" (change)="sum_pregunta16()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_16m_5" (change)="sum_pregunta16()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_16m_6" (change)="sum_pregunta16()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_16m_7" (change)="sum_pregunta16()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_16m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_16m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>17. En medio de multitudes o en espacios cerrados. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_17c" [(ngModel)]="testM.pregunta_17m" value="17">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_17m_1" (change)="sum_pregunta17()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_17m_2" (change)="sum_pregunta17()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_17m_3" (change)="sum_pregunta17()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_17m_4" (change)="sum_pregunta17()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_17m_5" (change)="sum_pregunta17()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_17m_6" (change)="sum_pregunta17()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_17m_7" (change)="sum_pregunta17()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_17m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_17m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>18. Cuando tengo que asistir a una reunión social o conocer gente nueva. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_18c" [(ngModel)]="testM.pregunta_18m" value="18">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_18m_1" (change)="sum_pregunta18()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_18m_2" (change)="sum_pregunta18()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_18m_3" (change)="sum_pregunta18()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_18m_4" (change)="sum_pregunta18()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_18m_5" (change)="sum_pregunta18()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_18m_6" (change)="sum_pregunta18()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_18m_7" (change)="sum_pregunta18()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_18m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_18m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>19. En lugares altos, o ante aguas profundas. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_19c" [(ngModel)]="testM.pregunta_19m" value="19">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_19m_1" (change)="sum_pregunta19()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_19m_2" (change)="sum_pregunta19()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_19m_3" (change)="sum_pregunta19()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_19m_4" (change)="sum_pregunta19()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_19m_5" (change)="sum_pregunta19()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_19m_6" (change)="sum_pregunta19()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_19m_7" (change)="sum_pregunta19()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_19m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_19m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>20. Al observar escenas violentas. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_20c" [(ngModel)]="testM.pregunta_20m" value="20">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_20m_1" (change)="sum_pregunta20()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_20m_2" (change)="sum_pregunta20()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_20m_3" (change)="sum_pregunta20()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_20m_4" (change)="sum_pregunta20()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_20m_5" (change)="sum_pregunta20()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_20m_6" (change)="sum_pregunta20()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_20m_7" (change)="sum_pregunta20()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_20m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_20m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>21. Por nada en concreto. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_21c" [(ngModel)]="testM.pregunta_21m" value="21">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_21m_1" (change)="sum_pregunta21()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_21m_2" (change)="sum_pregunta21()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_21m_3" (change)="sum_pregunta21()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_21m_4" (change)="sum_pregunta21()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_21m_5" (change)="sum_pregunta21()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_21m_6" (change)="sum_pregunta21()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_21m_7" (change)="sum_pregunta21()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_21m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_21m" readonly style="width: 55px;">
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>22. A la hora de dormir. </b>
+                    </label>
+                    <input type="hidden" name="pregunta_22c" [(ngModel)]="testM.pregunta_22m" value="22">
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_22m_1" (change)="sum_pregunta22()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_22m_2" (change)="sum_pregunta22()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_22m_3" (change)="sum_pregunta22()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_22m_4" (change)="sum_pregunta22()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_22m_5" (change)="sum_pregunta22()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_22m_6" (change)="sum_pregunta22()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_22m_7" (change)="sum_pregunta22()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_22m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_22m" readonly style="width: 55px;">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender" style="width: 200px;">
+                        <b>23. Escriba una situación en la que usted manifiesta frecuentemente alguna de estas
+                            respuestas o conductas.</b>
+                    </label>
+                    <input type="text" name="pregunta_23c" [(ngModel)]="testM.pregunta_23m" >
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_23m_1" (change)="sum_pregunta23()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_23m_2" (change)="sum_pregunta23()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_23m_3" (change)="sum_pregunta23()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_23m_4" (change)="sum_pregunta23()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_23m_5" (change)="sum_pregunta23()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_23m_6" (change)="sum_pregunta23()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <select [(ngModel)]="testM.res_23m_7" (change)="sum_pregunta23()">
+                        <option value="">--Seleccione--</option>
+                        <option value="0">Casi nunca</option>
+                        <option value="1">Pocas veces</option>
+                        <option value="2">Unas veces sí y otras no</option>
+                        <option value="3">Muchas veces</option>
+                        <option value="4">Casi siempre</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea [(ngModel)]="testM.obvs_23m" rows="3" cols="7"></textarea>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="testM.sum_res_23m" readonly style="width: 55px;">
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+<br>
+
+<button type="button" id="btn" class="btn btn-primary" expand="block" (click)="Enviar()">Enviar Respuestas</button>

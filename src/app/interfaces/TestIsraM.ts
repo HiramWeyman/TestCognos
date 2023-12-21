@@ -1,0 +1,254 @@
+export class TestIsraM{
+    pregunta_1m!: number;
+    res_1m_1!: number;
+    res_1m_2!: number;
+    res_1m_3!: number;
+    res_1m_4!: number;
+    res_1m_5!: number;
+    res_1m_6!: number;
+    res_1m_7!: number;
+    obvs_1m!: string;
+    sum_res_1m!:  number;
+
+    pregunta_2m!: number;
+    res_2m_1!: number;
+    res_2m_2!: number;
+    res_2m_3!: number;
+    res_2m_4!: number;
+    res_2m_5!: number;
+    res_2m_6!: number;
+    res_2m_7!: number;
+    obvs_2m!: string;
+    sum_res_2m!:number;
+
+    pregunta_3m!: number;
+    res_3m_1!: number;
+    res_3m_2!: number;
+    res_3m_3!: number;
+    res_3m_4!: number;
+    res_3m_5!: number;
+    res_3m_6!: number;
+    res_3m_7!: number;
+    obvs_3m!: string;
+    sum_res_3m!: number;
+
+    pregunta_4m!: number;
+    res_4m_1!: number;
+    res_4m_2!: number;
+    res_4m_3!: number;
+    res_4m_4!: number;
+    res_4m_5!: number;
+    res_4m_6!: number;
+    res_4m_7!: number;
+    obvs_4m!: string;
+    sum_res_4m!: number;
+
+    pregunta_5m!:number;
+    res_5m_1!: number;
+    res_5m_2!: number;
+    res_5m_3!: number;
+    res_5m_4!: number;
+    res_5m_5!: number;
+    res_5m_6!: number;
+    res_5m_7!: number;
+    obvs_5m!: string;
+    sum_res_5m!:number;
+
+    pregunta_6m!:number;
+    res_6m_1!: number;
+    res_6m_2!: number;
+    res_6m_3!: number;
+    res_6m_4!: number;
+    res_6m_5!: number;
+    res_6m_6!: number;
+    res_6m_7!: number;
+    obvs_6m!: string;
+    sum_res_6m!: number;
+
+    pregunta_7m!: number;
+    res_7m_1!: number;
+    res_7m_2!: number;
+    res_7m_3!: number;
+    res_7m_4!: number;
+    res_7m_5!: number;
+    res_7m_6!: number;
+    res_7m_7!: number;
+    obvs_7m!:string;
+    sum_res_7m!: number;
+
+    pregunta_8m!: number;
+    res_8m_1!: number;
+    res_8m_2!: number;
+    res_8m_3!: number;
+    res_8m_4!: number;
+    res_8m_5!: number;
+    res_8m_6!: number;
+    res_8m_7!: number;
+    obvs_8m!: string;
+    sum_res_8m!: number;
+
+    pregunta_9m!: number;
+    res_9m_1!: number;
+    res_9m_2!: number;
+    res_9m_3!: number;
+    res_9m_4!: number;
+    res_9m_5!: number;
+    res_9m_6!: number;
+    res_9m_7!: number;
+    obvs_9m!: string;
+    sum_res_9m!: number;
+
+    pregunta_10m!:number;
+    res_10m_1!: number;
+    res_10m_2!: number;
+    res_10m_3!: number;
+    res_10m_4!: number;
+    res_10m_5!: number;
+    res_10m_6!: number;
+    res_10m_7!: number;
+    obvs_10m!: string;
+    sum_res_10m!: number;
+
+    pregunta_11m!: number;
+    res_11m_1!: number;
+    res_11m_2!: number;
+    res_11m_3!: number;
+    res_11m_4!: number;
+    res_11m_5!: number;
+    res_11m_6!: number;
+    res_11m_7!: number;
+    obvs_11m!: string;
+    sum_res_11m!:number;
+
+    pregunta_12m!:number;
+    res_12m_1!: number;
+    res_12m_2!: number;
+    res_12m_3!: number;
+    res_12m_4!: number;
+    res_12m_5!: number;
+    res_12m_6!: number;
+    res_12m_7!: number;
+    obvs_12m!: string;
+    sum_res_12m!:number;
+
+    pregunta_13m!:number;
+    res_13m_1!: number;
+    res_13m_2!: number;
+    res_13m_3!: number;
+    res_13m_4!: number;
+    res_13m_5!: number;
+    res_13m_6!: number;
+    res_13m_7!: number;
+    obvs_13m!: string;
+    sum_res_13m!: number;
+
+    pregunta_14m!:number;
+    res_14m_1!: number;
+    res_14m_2!: number;
+    res_14m_3!: number;
+    res_14m_4!: number;
+    res_14m_5!: number;
+    res_14m_6!: number;
+    res_14m_7!: number;
+    obvs_14m!: string;
+    sum_res_14m!:number;
+
+    pregunta_15m!: number;
+    res_15m_1!: number;
+    res_15m_2!: number;
+    res_15m_3!: number;
+    res_15m_4!: number;
+    res_15m_5!: number;
+    res_15m_6!: number;
+    res_15m_7!: number;
+    obvs_15m!: string;
+    sum_res_15m!: number;
+
+    pregunta_16m!:number;
+    res_16m_1!: number;
+    res_16m_2!: number;
+    res_16m_3!: number;
+    res_16m_4!: number;
+    res_16m_5!: number;
+    res_16m_6!: number;
+    res_16m_7!: number;
+    obvs_16m!: string;
+    sum_res_16m!:number;
+
+    pregunta_17m!:number;
+    res_17m_1!: number;
+    res_17m_2!: number;
+    res_17m_3!: number;
+    res_17m_4!: number;
+    res_17m_5!: number;
+    res_17m_6!: number;
+    res_17m_7!: number;
+    obvs_17m!: string;
+    sum_res_17m!: number;
+
+    pregunta_18m!:number;
+    res_18m_1!: number;
+    res_18m_2!: number;
+    res_18m_3!: number;
+    res_18m_4!: number;
+    res_18m_5!: number;
+    res_18m_6!: number;
+    res_18m_7!: number;
+    obvs_18m!: string;
+    sum_res_18m!:number;
+
+    pregunta_19m!:number;
+    res_19m_1!: number;
+    res_19m_2!: number;
+    res_19m_3!: number;
+    res_19m_4!: number;
+    res_19m_5!: number;
+    res_19m_6!: number;
+    res_19m_7!: number;
+    obvs_19m!: string;
+    sum_res_19m!: number;
+
+    pregunta_20m!:number;
+    res_20m_1!: number;
+    res_20m_2!: number;
+    res_20m_3!: number;
+    res_20m_4!: number;
+    res_20m_5!: number;
+    res_20m_6!: number;
+    res_20m_7!: number;
+    obvs_20m!: string;
+    sum_res_20m!: number;
+
+    pregunta_21m!: number;
+    res_21m_1!: number;
+    res_21m_2!: number;
+    res_21m_3!: number;
+    res_21m_4!: number;
+    res_21m_5!: number;
+    res_21m_6!: number;
+    res_21m_7!: number;
+    obvs_21m!: string;
+    sum_res_21m!: number;
+
+    pregunta_22m!: number;
+    res_22m_1!: number;
+    res_22m_2!: number;
+    res_22m_3!: number;
+    res_22m_4!: number;
+    res_22m_5!: number;
+    res_22m_6!: number;
+    res_22m_7!: number;
+    obvs_22m!: string;
+    sum_res_22m!:number;
+
+    pregunta_23m!: number;
+    res_23m_1!: number;
+    res_23m_2!: number;
+    res_23m_3!: number;
+    res_23m_4!: number;
+    res_23m_5!: number;
+    res_23m_6!: number;
+    res_23m_7!: number;
+    obvs_23m!: string;
+    sum_res_23m!: number;
+}

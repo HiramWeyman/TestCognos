@@ -1,0 +1,254 @@
+export class TestIsraC{
+    pregunta_1c!: number;
+    res_1c_1!: number;
+    res_1c_2!: number;
+    res_1c_3!: number;
+    res_1c_4!: number;
+    res_1c_5!: number;
+    res_1c_6!: number;
+    res_1c_7!: number;
+    obvs_1c!: string;
+    sum_res_1c!:  number;
+
+    pregunta_2c!: number;
+    res_2c_1!: number;
+    res_2c_2!: number;
+    res_2c_3!: number;
+    res_2c_4!: number;
+    res_2c_5!: number;
+    res_2c_6!: number;
+    res_2c_7!: number;
+    obvs_2c!: string;
+    sum_res_2c!:number;
+
+    pregunta_3c!: number;
+    res_3c_1!: number;
+    res_3c_2!: number;
+    res_3c_3!: number;
+    res_3c_4!: number;
+    res_3c_5!: number;
+    res_3c_6!: number;
+    res_3c_7!: number;
+    obvs_3c!: string;
+    sum_res_3c!: number;
+
+    pregunta_4c!: number;
+    res_4c_1!: number;
+    res_4c_2!: number;
+    res_4c_3!: number;
+    res_4c_4!: number;
+    res_4c_5!: number;
+    res_4c_6!: number;
+    res_4c_7!: number;
+    obvs_4c!: string;
+    sum_res_4c!: number;
+
+    pregunta_5c!:number;
+    res_5c_1!: number;
+    res_5c_2!: number;
+    res_5c_3!: number;
+    res_5c_4!: number;
+    res_5c_5!: number;
+    res_5c_6!: number;
+    res_5c_7!: number;
+    obvs_5c!: string;
+    sum_res_5c!:number;
+
+    pregunta_6c!:number;
+    res_6c_1!: number;
+    res_6c_2!: number;
+    res_6c_3!: number;
+    res_6c_4!: number;
+    res_6c_5!: number;
+    res_6c_6!: number;
+    res_6c_7!: number;
+    obvs_6c!: string;
+    sum_res_6c!: number;
+
+    pregunta_7c!: number;
+    res_7c_1!: number;
+    res_7c_2!: number;
+    res_7c_3!: number;
+    res_7c_4!: number;
+    res_7c_5!: number;
+    res_7c_6!: number;
+    res_7c_7!: number;
+    obvs_7c!:string;
+    sum_res_7c!: number;
+
+    pregunta_8c!: number;
+    res_8c_1!: number;
+    res_8c_2!: number;
+    res_8c_3!: number;
+    res_8c_4!: number;
+    res_8c_5!: number;
+    res_8c_6!: number;
+    res_8c_7!: number;
+    obvs_8c!: string;
+    sum_res_8c!: number;
+
+    pregunta_9c!: number;
+    res_9c_1!: number;
+    res_9c_2!: number;
+    res_9c_3!: number;
+    res_9c_4!: number;
+    res_9c_5!: number;
+    res_9c_6!: number;
+    res_9c_7!: number;
+    obvs_9c!: string;
+    sum_res_9c!: number;
+
+    pregunta_10c!:number;
+    res_10c_1!: number;
+    res_10c_2!: number;
+    res_10c_3!: number;
+    res_10c_4!: number;
+    res_10c_5!: number;
+    res_10c_6!: number;
+    res_10c_7!: number;
+    obvs_10c!: string;
+    sum_res_10c!: number;
+
+    pregunta_11c!: number;
+    res_11c_1!: number;
+    res_11c_2!: number;
+    res_11c_3!: number;
+    res_11c_4!: number;
+    res_11c_5!: number;
+    res_11c_6!: number;
+    res_11c_7!: number;
+    obvs_11c!: string;
+    sum_res_11c!:number;
+
+    pregunta_12c!:number;
+    res_12c_1!: number;
+    res_12c_2!: number;
+    res_12c_3!: number;
+    res_12c_4!: number;
+    res_12c_5!: number;
+    res_12c_6!: number;
+    res_12c_7!: number;
+    obvs_12c!: string;
+    sum_res_12c!:number;
+
+    pregunta_13c!:number;
+    res_13c_1!: number;
+    res_13c_2!: number;
+    res_13c_3!: number;
+    res_13c_4!: number;
+    res_13c_5!: number;
+    res_13c_6!: number;
+    res_13c_7!: number;
+    obvs_13c!: string;
+    sum_res_13c!: number;
+
+    pregunta_14c!:number;
+    res_14c_1!: number;
+    res_14c_2!: number;
+    res_14c_3!: number;
+    res_14c_4!: number;
+    res_14c_5!: number;
+    res_14c_6!: number;
+    res_14c_7!: number;
+    obvs_14c!: string;
+    sum_res_14c!:number;
+
+    pregunta_15c!: number;
+    res_15c_1!: number;
+    res_15c_2!: number;
+    res_15c_3!: number;
+    res_15c_4!: number;
+    res_15c_5!: number;
+    res_15c_6!: number;
+    res_15c_7!: number;
+    obvs_15c!: string;
+    sum_res_15c!: number;
+
+    pregunta_16c!:number;
+    res_16c_1!: number;
+    res_16c_2!: number;
+    res_16c_3!: number;
+    res_16c_4!: number;
+    res_16c_5!: number;
+    res_16c_6!: number;
+    res_16c_7!: number;
+    obvs_16c!: string;
+    sum_res_16c!:number;
+
+    pregunta_17c!:number;
+    res_17c_1!: number;
+    res_17c_2!: number;
+    res_17c_3!: number;
+    res_17c_4!: number;
+    res_17c_5!: number;
+    res_17c_6!: number;
+    res_17c_7!: number;
+    obvs_17c!: string;
+    sum_res_17c!: number;
+
+    pregunta_18c!:number;
+    res_18c_1!: number;
+    res_18c_2!: number;
+    res_18c_3!: number;
+    res_18c_4!: number;
+    res_18c_5!: number;
+    res_18c_6!: number;
+    res_18c_7!: number;
+    obvs_18c!: string;
+    sum_res_18c!:number;
+
+    pregunta_19c!:number;
+    res_19c_1!: number;
+    res_19c_2!: number;
+    res_19c_3!: number;
+    res_19c_4!: number;
+    res_19c_5!: number;
+    res_19c_6!: number;
+    res_19c_7!: number;
+    obvs_19c!: string;
+    sum_res_19c!: number;
+
+    pregunta_20c!:number;
+    res_20c_1!: number;
+    res_20c_2!: number;
+    res_20c_3!: number;
+    res_20c_4!: number;
+    res_20c_5!: number;
+    res_20c_6!: number;
+    res_20c_7!: number;
+    obvs_20c!: string;
+    sum_res_20c!: number;
+
+    pregunta_21c!: number;
+    res_21c_1!: number;
+    res_21c_2!: number;
+    res_21c_3!: number;
+    res_21c_4!: number;
+    res_21c_5!: number;
+    res_21c_6!: number;
+    res_21c_7!: number;
+    obvs_21c!: string;
+    sum_res_21c!: number;
+
+    pregunta_22c!: number;
+    res_22c_1!: number;
+    res_22c_2!: number;
+    res_22c_3!: number;
+    res_22c_4!: number;
+    res_22c_5!: number;
+    res_22c_6!: number;
+    res_22c_7!: number;
+    obvs_22c!: string;
+    sum_res_22c!:number;
+
+    pregunta_23c!: number;
+    res_23c_1!: number;
+    res_23c_2!: number;
+    res_23c_3!: number;
+    res_23c_4!: number;
+    res_23c_5!: number;
+    res_23c_6!: number;
+    res_23c_7!: number;
+    obvs_23c!: string;
+    sum_res_23c!: number;
+}

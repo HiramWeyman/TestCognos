@@ -23,6 +23,8 @@ import { TestbaianComponent } from './pages/testbaian/testbaian.component';
 import { TestbdidpComponent } from './pages/testbdidp/testbdidp.component';
 import { TestcreenciasComponent } from './pages/testcreencias/testcreencias.component';
 import { TestscidComponent } from './pages/testscid/testscid.component';
+import { TestizraComponent } from './pages/testizra/testizra.component';
+import { TestisraComponent } from './pages/testisra/testisra.component';
 
 
 const routes: Routes = [
@@ -32,6 +34,8 @@ const routes: Routes = [
 {path:'testbdidp/:id',component:TestbdidpComponent},
 {path:'testcreencias/:id',component:TestcreenciasComponent},
 {path:'testscid/:id',component:TestscidComponent},
+{path:'testizra/:id',component:TestizraComponent},
+{path:'testisra/:id',component:TestisraComponent},
 
 {path:'registro',component:RegistroComponent},
 {path:'about',component:AboutComponent},

@@ -46,7 +46,10 @@ import { TestbaianComponent } from './pages/testbaian/testbaian.component';
 import { TestbdidpComponent } from './pages/testbdidp/testbdidp.component';
 import { TestcreenciasComponent } from './pages/testcreencias/testcreencias.component';
 import { TestscidComponent } from './pages/testscid/testscid.component';
-
+import { TestizraComponent } from './pages/testizra/testizra.component';
+import { TestisraComponent } from './pages/testisra/testisra.component';
+import { TestIsr } from './pages/testisra/testisra.component';
+import { TestIsrM } from './pages/testisra/testisra.component';
 
 
 @NgModule({
@@ -78,8 +81,11 @@ import { TestscidComponent } from './pages/testscid/testscid.component';
     TestbaianComponent,
     TestbdidpComponent,
     TestcreenciasComponent,
-    TestscidComponent
-
+    TestscidComponent,
+    TestizraComponent,
+    TestisraComponent,
+    TestIsr,
+    TestIsrM,
   ],
   imports: [
     BrowserModule,
@@ -99,6 +105,7 @@ import { TestscidComponent } from './pages/testscid/testscid.component';
     MatProgressBarModule,
     HttpClientModule,
     BlockUIModule.forRoot(),
+    
   ],
   providers: [
     NavbarService
