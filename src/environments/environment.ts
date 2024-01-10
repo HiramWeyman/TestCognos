@@ -7,7 +7,8 @@ export const environment = {
 
 
   
-   rutaAPI: 'https://localhost:7161/api'
+   //rutaAPI: 'https://localhost:7161/api'
+   rutaAPI: 'https://api.iescognos.com/api'
    //rutaAPI:'https://ciia2023.ujed.mx/api'
 };
 
