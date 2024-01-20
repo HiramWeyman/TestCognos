@@ -25,10 +25,11 @@ import { TestcreenciasComponent } from './pages/testcreencias/testcreencias.comp
 import { TestscidComponent } from './pages/testscid/testscid.component';
 import { TestizraComponent } from './pages/testizra/testizra.component';
 import { TestisraComponent } from './pages/testisra/testisra.component';
+import { RecuperaComponent } from './pages/recupera/recupera.component';
 
 
 const routes: Routes = [
-{path:'',component:InicioComponent}, 
+/* {path:'',component:InicioComponent},  */
 {path:'inicio/:id',component:InicioComponent},
 {path:'testbaian/:id',component:TestbaianComponent},
 {path:'testbdidp/:id',component:TestbdidpComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
 {path:'testscid/:id',component:TestscidComponent},
 {path:'testizra/:id',component:TestizraComponent},
 {path:'testisra/:id',component:TestisraComponent},
+{path:'recupera/:correo',component:RecuperaComponent},
 
 {path:'registro',component:RegistroComponent},
 {path:'about',component:AboutComponent},
@@ -62,12 +64,12 @@ const routes: Routes = [
 
 {path:'lineamientos',component:LineamientosComponent},
 
-{path:'**',pathMatch:'full',redirectTo:''},
+/* {path:'**',pathMatch:'full',redirectTo:''}, */
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{ useHash: true })],
+  imports: [RouterModule.forRoot(routes,{ useHash: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

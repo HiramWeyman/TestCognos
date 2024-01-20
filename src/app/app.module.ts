@@ -50,6 +50,7 @@ import { TestizraComponent } from './pages/testizra/testizra.component';
 import { TestisraComponent } from './pages/testisra/testisra.component';
 import { TestIsr } from './pages/testisra/testisra.component';
 import { TestIsrM } from './pages/testisra/testisra.component';
+import { RecuperaComponent } from './pages/recupera/recupera.component';
 
 
 @NgModule({
@@ -86,6 +87,7 @@ import { TestIsrM } from './pages/testisra/testisra.component';
     TestisraComponent,
     TestIsr,
     TestIsrM,
+    RecuperaComponent,
   ],
   imports: [
     BrowserModule,
