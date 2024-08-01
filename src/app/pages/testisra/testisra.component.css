@@ -13,3 +13,30 @@ textarea{
 table  { border-collapse: collapse; width: 100%; }
 th, td { padding: 8px 16px; }
 th     { background:#eee; }
+
+/* Estilo para el select deshabilitado */
+select[disabled] {
+    background-color: #e9ecef; /* Un color gris claro para indicar que está deshabilitado */
+    color: #6c757d; /* Un color de texto más claro */
+    border: 1px solid #ced4da; /* Un borde que indique deshabilitado */
+    cursor: not-allowed; /* Cambiar el cursor a no permitido */
+}
+
+  /* Estilo para el select habilitado */
+select:enabled {
+  background-color: #ffffff; /* Fondo blanco para el select habilitado */
+  color: #000000; /* Color de texto negro para el select habilitado */
+  border: 1px solid #ced4da; /* Borde estándar */
+  cursor: pointer; /* Cambiar el cursor a pointer para indicar que es interactivo */
+}
+
+/* Estilo para las opciones dentro del select */
+select:enabled option {
+  background-color: #ffffff; /* Fondo blanco para las opciones habilitadas */
+  color: #000000; /* Color de texto negro para las opciones habilitadas */
+}
+
+.answered {
+  border-color: #28a745; /* Borde verde para indicar que fue contestado */
+  background-color: #e8f5e9; /* Fondo verde claro para indicar que fue contestado */
+}
