@@ -2700,3 +2700,12 @@
 </div><br>
 
 <TestIsrM [testCx]="testCx" [testFx]="testF"></TestIsrM>
+<style>
+    /* Estilo para el select deshabilitado */
+select[disabled] {
+    background-color: #e9ecef; /* Un color gris claro para indicar que está deshabilitado */
+    color: #6c757d; /* Un color de texto más claro */
+    border: 1px solid #ced4da; /* Un borde que indique deshabilitado */
+    cursor: not-allowed; /* Cambiar el cursor a no permitido */
+}
+</style>
