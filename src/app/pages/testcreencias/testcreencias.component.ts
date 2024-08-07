@@ -300,6 +300,13 @@ export class TestcreenciasComponent {
       this.modelArray.push({
 
         res_pregunta: value.pregunta_6,
+        res_respuesta: Number(value.respuesta_6),
+        res_id_paciente: this.id,
+      });
+
+      this.modelArray.push({
+
+        res_pregunta: value.pregunta_7,
         res_respuesta: Number(value.respuesta_7),
         res_id_paciente: this.id,
       });
@@ -322,13 +329,6 @@ export class TestcreenciasComponent {
 
         res_pregunta: value.pregunta_10,
         res_respuesta: Number(value.respuesta_10),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_11,
-        res_respuesta: Number(value.respuesta_11),
         res_id_paciente: this.id,
       });
 
@@ -970,30 +970,33 @@ export class TestcreenciasComponent {
         res_id_paciente: this.id,
       });
 
-      this._ini.DeleteResp(this.id).subscribe(del=>{
+      this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+        console.log("Entramos");
+
+        if(usr){
+          this.blockUI.stop();
+          console.log(usr);
+          Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+      
+          const btn = document.getElementById('btn') as HTMLButtonElement | null;
+          btn?.setAttribute('disabled', '');
+        }
+
+    },
+      error => {
+        console.log(error);
+        this.blockUI.stop();
+        Swal.fire({
+          title: 'ERROR!!!',
+          text: error.error.message,
+          icon: 'error'
+        });
+
+      });
+
+      /* this._ini.DeleteResp(this.id).subscribe(del=>{
         if(del){
-          this._ini.EnviarResp(this.modelArray).subscribe(usr => {
-   
-            if(usr){
-              this.blockUI.stop();
-              console.log(usr);
-              Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
-          
-              const btn = document.getElementById('btn') as HTMLButtonElement | null;
-              btn?.setAttribute('disabled', '');
-            }
-    
-        },
-          error => {
-            console.log(error);
-            this.blockUI.stop();
-            Swal.fire({
-              title: 'ERROR!!!',
-              text: error.error.message,
-              icon: 'error'
-            });
-    
-          }); 
+           
         }
       },error=>{
         console.log(error);
@@ -1004,7 +1007,7 @@ export class TestcreenciasComponent {
           icon: 'error'
         });
       });
-
+ */
 
 
       const btn = document.getElementById('btn') as HTMLButtonElement | null;
