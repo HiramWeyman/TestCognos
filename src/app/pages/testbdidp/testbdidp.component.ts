@@ -232,30 +232,32 @@ export class TestbdidpComponent {
         res_id_paciente: this.id,
       });
 
-      this._ini.DeleteResp(this.id).subscribe(del => {
-        if (del) {
-          this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+      this._ini.EnviarResp(this.modelArray).subscribe(usr => {
    
-            if(usr){
-              this.blockUI.stop();
-              console.log(usr);
-              Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+        if(usr){
+          this.blockUI.stop();
+          console.log(usr);
+          Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+      
+          const btn = document.getElementById('btn') as HTMLButtonElement | null;
+          btn?.setAttribute('disabled', '');
+        }
+
+    },
+      error => {
+        console.log(error);
+        this.blockUI.stop();
+        Swal.fire({
+          title: 'ERROR!!!',
+          text: error.error.message,
+          icon: 'error'
+        });
+
+      }); 
+
+      /* this._ini.DeleteResp(this.id).subscribe(del => {
+        if (del) {
           
-              const btn = document.getElementById('btn') as HTMLButtonElement | null;
-              btn?.setAttribute('disabled', '');
-            }
-    
-        },
-          error => {
-            console.log(error);
-            this.blockUI.stop();
-            Swal.fire({
-              title: 'ERROR!!!',
-              text: error.error.message,
-              icon: 'error'
-            });
-    
-          }); 
     
         }
       },error=>{
@@ -266,7 +268,7 @@ export class TestbdidpComponent {
           text: error.error.message,
           icon: 'error'
         });
-      });
+      }); */
 
       const btn = document.getElementById('btn') as HTMLButtonElement | null;
       btn?.setAttribute('disabled', '');

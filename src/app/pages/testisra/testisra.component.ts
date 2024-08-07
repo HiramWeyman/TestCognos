@@ -15551,39 +15551,41 @@ export class TestIsrM {
       res_id_paciente :this.id,
     });
 
-
-    this._ini.DeleteResp(this.id).subscribe(del=>{
-      if(del){
-        this._ini.EnviarRespC(this.modelArrayC).subscribe(usr => {
+    this._ini.EnviarRespC(this.modelArrayC).subscribe(usr => {
  
-          if(usr){
+      if(usr){
 
-            this._ini.EnviarRespF(this.modelArrayF).subscribe(usr2=>{
-                if(usr2){
-                  this._ini.EnviarRespM(this.modelArrayM).subscribe(usr3=>{
-                    this.blockUI.stop();
-                    console.log(usr3);
-                    Swal.fire('Respuestas Guardadas', `${usr3.descripcion}!`, 'success');
-                
-                    const btn = document.getElementById('btn') as HTMLButtonElement | null;
-                    btn?.setAttribute('disabled', '');
-                  });
-                }
-            });
-     
-          }
-  
-      },
-        error => {
-          console.log(error);
-          this.blockUI.stop();
-          Swal.fire({
-            title: 'ERROR!!!',
-            text: error.error.message,
-            icon: 'error'
-          });
-  
-        }); 
+        this._ini.EnviarRespF(this.modelArrayF).subscribe(usr2=>{
+            if(usr2){
+              this._ini.EnviarRespM(this.modelArrayM).subscribe(usr3=>{
+                this.blockUI.stop();
+                console.log(usr3);
+                Swal.fire('Respuestas Guardadas', `${usr3.descripcion}!`, 'success');
+            
+                const btn = document.getElementById('btn') as HTMLButtonElement | null;
+                btn?.setAttribute('disabled', '');
+              });
+            }
+        });
+ 
+      }
+
+  },
+    error => {
+      console.log(error);
+      this.blockUI.stop();
+      Swal.fire({
+        title: 'ERROR!!!',
+        text: error.error.message,
+        icon: 'error'
+      });
+
+    }); 
+
+
+    /* this._ini.DeleteResp(this.id).subscribe(del=>{
+      if(del){
+        
       }
     },error=>{
       console.log(error);
@@ -15593,7 +15595,7 @@ export class TestIsrM {
         text: error.error.message,
         icon: 'error'
       });
-    });
+    }); */
 
 
 

@@ -1143,30 +1143,32 @@ export class TestscidComponent {
         res_id_paciente: this.id,
       });
 
-      this._ini.DeleteResp(this.id).subscribe(del=>{
-        if(del){
-          this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+      this._ini.EnviarResp(this.modelArray).subscribe(usr => {
    
-            if(usr){
-              this.blockUI.stop();
-              console.log(usr);
-              Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
-          
-              const btn = document.getElementById('btn') as HTMLButtonElement | null;
-              btn?.setAttribute('disabled', '');
-            }
-    
-        },
-          error => {
-            console.log(error);
-            this.blockUI.stop();
-            Swal.fire({
-              title: 'ERROR!!!',
-              text: error.error.message,
-              icon: 'error'
-            });
-    
-          }); 
+        if(usr){
+          this.blockUI.stop();
+          console.log(usr);
+          Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+      
+          const btn = document.getElementById('btn') as HTMLButtonElement | null;
+          btn?.setAttribute('disabled', '');
+        }
+
+    },
+      error => {
+        console.log(error);
+        this.blockUI.stop();
+        Swal.fire({
+          title: 'ERROR!!!',
+          text: error.error.message,
+          icon: 'error'
+        });
+
+      });
+
+      /* this._ini.DeleteResp(this.id).subscribe(del=>{
+        if(del){
+           
         }
       },error=>{
         console.log(error);
@@ -1176,7 +1178,7 @@ export class TestscidComponent {
           text: error.error.message,
           icon: 'error'
         });
-      });
+      }); */
 
 
 
