@@ -44,7 +44,17 @@ export class InicioService {
 
   }
 
-  DeleteResp(id:number) {
+  InsertaMaestro(id:number) {
+  
+    return this.http.post(`${environment.rutaAPI + '/scl/MaestroSCL?maestro_id_paciente='+id}`,'').pipe(
+      map((response: any) => {
+        return response;
+      })
+    );
+
+  }
+
+/*   DeleteResp(id:number) {
   
     return this.http.delete(`${environment.rutaAPI + '/scl/deleteSCLResp/'+id}`).pipe(
       map((response: any) => {
@@ -52,7 +62,7 @@ export class InicioService {
       })
     );
 
-  }
+  } */
 
   
 

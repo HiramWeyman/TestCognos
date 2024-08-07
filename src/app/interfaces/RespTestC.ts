@@ -10,4 +10,5 @@ export class RespTestC{
      res_observacion ! :string;
      res_sum !:number;
      res_id_paciente !:number;
+     res_id_maestro!:number;
 }

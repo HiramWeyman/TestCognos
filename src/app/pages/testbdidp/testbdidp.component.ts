@@ -18,6 +18,7 @@ export class TestbdidpComponent {
   blockUI!: NgBlockUI;
   id!: number;
   preguntas!: any[];
+  maestro!:number;
   public modelArray: RespTestBDI[] = [];
   form!: FormGroup;
   isFormSubmitted = false;
@@ -86,161 +87,184 @@ export class TestbdidpComponent {
       //this.submittedValue = undefined;
     } else {
 
-      this.modelArray.push({
 
-        res_pregunta: value.pregunta_1,
-        res_respuesta: value.respuesta_1,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-        res_pregunta: value.pregunta_2,
-        res_respuesta: value.respuesta_2,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_3,
-        res_respuesta: value.respuesta_3,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_4,
-        res_respuesta: value.respuesta_4,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_5,
-        res_respuesta: value.respuesta_5,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_6,
-        res_respuesta: value.respuesta_7,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_8,
-        res_respuesta: value.respuesta_8,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_9,
-        res_respuesta: value.respuesta_9,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_10,
-        res_respuesta: value.respuesta_10,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_11,
-        res_respuesta: value.respuesta_11,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_11,
-        res_respuesta: value.respuesta_11,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_12,
-        res_respuesta: value.respuesta_12,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_13,
-        res_respuesta: value.respuesta_13,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_14,
-        res_respuesta: (value.respuesta_14),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_15,
-        res_respuesta: value.respuesta_15,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_16,
-        res_respuesta: value.respuesta_16,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_17,
-        res_respuesta: value.respuesta_17,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_18,
-        res_respuesta: value.respuesta_18,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_19,
-        res_respuesta: value.respuesta_19,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_20,
-        res_respuesta: value.respuesta_20,
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_21,
-        res_respuesta: value.respuesta_21,
-        res_id_paciente: this.id,
-      });
-
-      this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+      this._ini.InsertaMaestro(this.id).subscribe(resp => {
    
-        if(usr){
+        if(resp){
+          console.log('Respuesta');
+          console.log(resp.id);
+          this.maestro=Number(resp.id);
           this.blockUI.stop();
-          console.log(usr);
-          Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+          this.modelArray.push({
+
+            res_pregunta: value.pregunta_1,
+            res_respuesta: value.respuesta_1,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+            res_pregunta: value.pregunta_2,
+            res_respuesta: value.respuesta_2,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_3,
+            res_respuesta: value.respuesta_3,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_4,
+            res_respuesta: value.respuesta_4,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_5,
+            res_respuesta: value.respuesta_5,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_6,
+            res_respuesta: value.respuesta_6,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_7,
+            res_respuesta: value.respuesta_7,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_8,
+            res_respuesta: value.respuesta_8,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_9,
+            res_respuesta: value.respuesta_9,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_10,
+            res_respuesta: value.respuesta_10,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_11,
+            res_respuesta: value.respuesta_11,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_12,
+            res_respuesta: value.respuesta_12,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_13,
+            res_respuesta: value.respuesta_13,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_14,
+            res_respuesta: (value.respuesta_14),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_15,
+            res_respuesta: value.respuesta_15,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_16,
+            res_respuesta: value.respuesta_16,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_17,
+            res_respuesta: value.respuesta_17,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_18,
+            res_respuesta: value.respuesta_18,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_19,
+            res_respuesta: value.respuesta_19,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_20,
+            res_respuesta: value.respuesta_20,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_21,
+            res_respuesta: value.respuesta_21,
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+       
+            if(usr){
+              this.blockUI.stop();
+              console.log(usr);
+              Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+          
+              const btn = document.getElementById('btn') as HTMLButtonElement | null;
+              btn?.setAttribute('disabled', '');
+            }
+    
+        },
+          error => {
+            console.log(error);
+            this.blockUI.stop();
+            Swal.fire({
+              title: 'ERROR!!!',
+              text: error.error.message,
+              icon: 'error'
+            });
+    
+          }); 
       
-          const btn = document.getElementById('btn') as HTMLButtonElement | null;
-          btn?.setAttribute('disabled', '');
         }
 
     },
@@ -255,20 +279,9 @@ export class TestbdidpComponent {
 
       }); 
 
-      /* this._ini.DeleteResp(this.id).subscribe(del => {
-        if (del) {
-          
-    
-        }
-      },error=>{
-        console.log(error);
-        this.blockUI.stop();
-        Swal.fire({
-          title: 'ERROR!!!',
-          text: error.error.message,
-          icon: 'error'
-        });
-      }); */
+      
+
+
 
       const btn = document.getElementById('btn') as HTMLButtonElement | null;
       btn?.setAttribute('disabled', '');

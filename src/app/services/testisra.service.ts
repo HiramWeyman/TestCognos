@@ -62,8 +62,18 @@ export class TestIsraService {
 
   }
 
+  InsertaMaestro(id:number) {
+  
+    return this.http.post(`${environment.rutaAPI + '/isra/MaestroIsra?maestro_id_paciente='+id}`,'').pipe(
+      map((response: any) => {
+        return response;
+      })
+    );
 
-  DeleteResp(id:number) {
+  }
+
+
+ /*  DeleteResp(id:number) {
   
     return this.http.delete(`${environment.rutaAPI + '/isra/deleteIsraResp/'+id}`).pipe(
       map((response: any) => {
@@ -71,7 +81,7 @@ export class TestIsraService {
       })
     );
 
-  }
+  } */
 
   
 

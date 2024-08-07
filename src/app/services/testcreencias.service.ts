@@ -41,12 +41,22 @@ export class TestcreenciasService {
         return response;
       })
     );
-
+    
   }
 
-  DeleteResp(id:number) {
+  /* DeleteResp(id:number) {
   
     return this.http.delete(`${environment.rutaAPI + '/ellis/deleteEllisResp/'+id}`).pipe(
+      map((response: any) => {
+        return response;
+      })
+    );
+
+  } */
+
+  InsertaMaestro(id:number) {
+  
+    return this.http.post(`${environment.rutaAPI + '/ellis/MaestroEllis?maestro_id_paciente='+id}`,'').pipe(
       map((response: any) => {
         return response;
       })

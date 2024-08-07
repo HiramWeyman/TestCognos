@@ -21,15 +21,6 @@ export class TestbdidpService {
 
   public urlEndPoint = `${environment.rutaAPI}`;
    public valor:any;
-/*   RegistroPacientes(paciente: Pacientes): Observable<Pacientes> {
-    return this.http.post<Pacientes>(`${environment.rutaAPI}` + '/Pacientes', paciente);
-  } */
-
- /*  GetPreguntas(): Observable<any[]> {
-    return this.http.get(`${environment.rutaAPI}` + '/baiAn/testBAIan').pipe(
-      map(response => response as any[])
-    );
-  } */
 
 
   EnviarResp(resp: RespTestBDI[]) {
@@ -45,7 +36,17 @@ export class TestbdidpService {
 
   }
 
-  DeleteResp(id:number) {
+  InsertaMaestro(id:number) {
+  
+    return this.http.post(`${environment.rutaAPI + '/bdiDp/MaestroBDIdp?maestro_id_paciente='+id}`,'').pipe(
+      map((response: any) => {
+        return response;
+      })
+    );
+
+  }
+
+ /*  DeleteResp(id:number) {
   
     return this.http.delete(`${environment.rutaAPI + '/bdiDp/deleteBDIdpResp/'+id}`).pipe(
       map((response: any) => {
@@ -53,7 +54,7 @@ export class TestbdidpService {
       })
     );
 
-  }
+  } */
 
   
 

@@ -17,6 +17,7 @@ export class TestscidComponent {
   blockUI!: NgBlockUI;
   id!: number;
   preguntas!: any[];
+  maestro!:number;
   public modelArray: RespTest[] = [];
 
   form!: FormGroup;
@@ -303,855 +304,876 @@ export class TestscidComponent {
       //this.submittedValue = undefined;
     } else {
 
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_1,
-        res_respuesta: Number(value.respuesta_1),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-        res_pregunta: value.pregunta_2,
-        res_respuesta: Number(value.respuesta_2),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_3,
-        res_respuesta: Number(value.respuesta_3),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_4,
-        res_respuesta: Number(value.respuesta_4),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_5,
-        res_respuesta: Number(value.respuesta_5),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_6,
-        res_respuesta: Number(value.respuesta_7),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_8,
-        res_respuesta: Number(value.respuesta_8),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_9,
-        res_respuesta: Number(value.respuesta_9),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_10,
-        res_respuesta: Number(value.respuesta_10),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_11,
-        res_respuesta: Number(value.respuesta_11),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_11,
-        res_respuesta: Number(value.respuesta_11),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_12,
-        res_respuesta: Number(value.respuesta_12),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_13,
-        res_respuesta: Number(value.respuesta_13),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_14,
-        res_respuesta: Number(value.respuesta_14),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_15,
-        res_respuesta: Number(value.respuesta_15),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_16,
-        res_respuesta: Number(value.respuesta_16),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_17,
-        res_respuesta: Number(value.respuesta_17),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_18,
-        res_respuesta: Number(value.respuesta_18),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_19,
-        res_respuesta: Number(value.respuesta_19),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_20,
-        res_respuesta: Number(value.respuesta_20),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_21,
-        res_respuesta: Number(value.respuesta_21),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_22,
-        res_respuesta: Number(value.respuesta_22),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_23,
-        res_respuesta: Number(value.respuesta_23),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_24,
-        res_respuesta: Number(value.respuesta_24),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_25,
-        res_respuesta: Number(value.respuesta_25),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_26,
-        res_respuesta: Number(value.respuesta_26),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_27,
-        res_respuesta: Number(value.respuesta_27),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_28,
-        res_respuesta: Number(value.respuesta_28),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_29,
-        res_respuesta: Number(value.respuesta_29),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_30,
-        res_respuesta: Number(value.respuesta_30),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_31,
-        res_respuesta: Number(value.respuesta_31),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_32,
-        res_respuesta: Number(value.respuesta_32),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_33,
-        res_respuesta: Number(value.respuesta_33),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_34,
-        res_respuesta: Number(value.respuesta_34),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_35,
-        res_respuesta: Number(value.respuesta_35),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_36,
-        res_respuesta: Number(value.respuesta_36),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_37,
-        res_respuesta: Number(value.respuesta_37),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_38,
-        res_respuesta: Number(value.respuesta_38),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_39,
-        res_respuesta: Number(value.respuesta_39),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_40,
-        res_respuesta: Number(value.respuesta_40),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_41,
-        res_respuesta: Number(value.respuesta_41),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_42,
-        res_respuesta: Number(value.respuesta_42),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_43,
-        res_respuesta: Number(value.respuesta_43),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_44,
-        res_respuesta: Number(value.respuesta_44),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_45,
-        res_respuesta: Number(value.respuesta_45),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_46,
-        res_respuesta: Number(value.respuesta_46),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_47,
-        res_respuesta: Number(value.respuesta_47),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_48,
-        res_respuesta: Number(value.respuesta_48),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_49,
-        res_respuesta: Number(value.respuesta_49),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_50,
-        res_respuesta: Number(value.respuesta_50),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_51,
-        res_respuesta: Number(value.respuesta_51),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_52,
-        res_respuesta: Number(value.respuesta_52),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_53,
-        res_respuesta: Number(value.respuesta_53),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_54,
-        res_respuesta: Number(value.respuesta_54),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_55,
-        res_respuesta: Number(value.respuesta_55),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_56,
-        res_respuesta: Number(value.respuesta_56),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_57,
-        res_respuesta: Number(value.respuesta_57),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_58,
-        res_respuesta: Number(value.respuesta_58),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_59,
-        res_respuesta: Number(value.respuesta_59),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_60,
-        res_respuesta: Number(value.respuesta_60),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_61,
-        res_respuesta: Number(value.respuesta_61),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_62,
-        res_respuesta: Number(value.respuesta_62),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_63,
-        res_respuesta: Number(value.respuesta_63),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_64,
-        res_respuesta: Number(value.respuesta_64),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_65,
-        res_respuesta: Number(value.respuesta_65),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_66,
-        res_respuesta: Number(value.respuesta_66),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_67,
-        res_respuesta: Number(value.respuesta_67),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_68,
-        res_respuesta: Number(value.respuesta_68),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_69,
-        res_respuesta: Number(value.respuesta_69),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_70,
-        res_respuesta: Number(value.respuesta_70),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_71,
-        res_respuesta: Number(value.respuesta_71),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_72,
-        res_respuesta: Number(value.respuesta_72),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_73,
-        res_respuesta: Number(value.respuesta_73),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_74,
-        res_respuesta: Number(value.respuesta_74),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_75,
-        res_respuesta: Number(value.respuesta_75),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_76,
-        res_respuesta: Number(value.respuesta_76),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_77,
-        res_respuesta: Number(value.respuesta_77),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_78,
-        res_respuesta: Number(value.respuesta_78),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_79,
-        res_respuesta: Number(value.respuesta_79),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_80,
-        res_respuesta: Number(value.respuesta_80),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_81,
-        res_respuesta: Number(value.respuesta_81),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_82,
-        res_respuesta: Number(value.respuesta_82),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_83,
-        res_respuesta: Number(value.respuesta_83),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_84,
-        res_respuesta: Number(value.respuesta_84),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_85,
-        res_respuesta: Number(value.respuesta_85),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_86,
-        res_respuesta: Number(value.respuesta_86),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_87,
-        res_respuesta: Number(value.respuesta_87),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_88,
-        res_respuesta: Number(value.respuesta_88),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_89,
-        res_respuesta: Number(value.respuesta_89),
-        res_id_paciente: this.id,
-      });
-
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_90,
-        res_respuesta: Number(value.respuesta_90),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_91,
-        res_respuesta: Number(value.respuesta_91),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_92,
-        res_respuesta: Number(value.respuesta_92),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_93,
-        res_respuesta: Number(value.respuesta_93),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_94,
-        res_respuesta: Number(value.respuesta_94),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_95,
-        res_respuesta: Number(value.respuesta_95),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_96,
-        res_respuesta: Number(value.respuesta_96),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_97,
-        res_respuesta: Number(value.respuesta_97),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_98,
-        res_respuesta: Number(value.respuesta_98),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_99,
-        res_respuesta: Number(value.respuesta_99),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_100,
-        res_respuesta: Number(value.respuesta_100),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_101,
-        res_respuesta: Number(value.respuesta_101),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_102,
-        res_respuesta: Number(value.respuesta_102),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_103,
-        res_respuesta: Number(value.respuesta_103),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_104,
-        res_respuesta: Number(value.respuesta_104),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_105,
-        res_respuesta: Number(value.respuesta_105),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_106,
-        res_respuesta: Number(value.respuesta_106),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_107,
-        res_respuesta: Number(value.respuesta_107),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_108,
-        res_respuesta: Number(value.respuesta_108),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_109,
-        res_respuesta: Number(value.respuesta_109),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_110,
-        res_respuesta: Number(value.respuesta_110),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_111,
-        res_respuesta: Number(value.respuesta_111),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_112,
-        res_respuesta: Number(value.respuesta_112),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_113,
-        res_respuesta: Number(value.respuesta_113),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_114,
-        res_respuesta: Number(value.respuesta_114),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_115,
-        res_respuesta: Number(value.respuesta_115),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_116,
-        res_respuesta: Number(value.respuesta_116),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_117,
-        res_respuesta: Number(value.respuesta_117),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_118,
-        res_respuesta: Number(value.respuesta_118),
-        res_id_paciente: this.id,
-      });
-
-      this.modelArray.push({
-
-        res_pregunta: value.pregunta_119,
-        res_respuesta: Number(value.respuesta_119),
-        res_id_paciente: this.id,
-      });
-
-      this._ini.EnviarResp(this.modelArray).subscribe(usr => {
-   
-        if(usr){
-          this.blockUI.stop();
-          console.log(usr);
-          Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
       
-          const btn = document.getElementById('btn') as HTMLButtonElement | null;
-          btn?.setAttribute('disabled', '');
+      this._ini.InsertaMaestro(this.id).subscribe(resp => {
+   
+        if(resp){
+          this.blockUI.stop();
+          console.log(resp);
+          this.maestro=Number(resp.id)
+          this.modelArray.push({
+
+            res_pregunta: value.pregunta_1,
+            res_respuesta: Number(value.respuesta_1),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+            res_pregunta: value.pregunta_2,
+            res_respuesta: Number(value.respuesta_2),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_3,
+            res_respuesta: Number(value.respuesta_3),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_4,
+            res_respuesta: Number(value.respuesta_4),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_5,
+            res_respuesta: Number(value.respuesta_5),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_6,
+            res_respuesta: Number(value.respuesta_6),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_7,
+            res_respuesta: Number(value.respuesta_7),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_8,
+            res_respuesta: Number(value.respuesta_8),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_9,
+            res_respuesta: Number(value.respuesta_9),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_10,
+            res_respuesta: Number(value.respuesta_10),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_11,
+            res_respuesta: Number(value.respuesta_11),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+         
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_12,
+            res_respuesta: Number(value.respuesta_12),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_13,
+            res_respuesta: Number(value.respuesta_13),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_14,
+            res_respuesta: Number(value.respuesta_14),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_15,
+            res_respuesta: Number(value.respuesta_15),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_16,
+            res_respuesta: Number(value.respuesta_16),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_17,
+            res_respuesta: Number(value.respuesta_17),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_18,
+            res_respuesta: Number(value.respuesta_18),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_19,
+            res_respuesta: Number(value.respuesta_19),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_20,
+            res_respuesta: Number(value.respuesta_20),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_21,
+            res_respuesta: Number(value.respuesta_21),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_22,
+            res_respuesta: Number(value.respuesta_22),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_23,
+            res_respuesta: Number(value.respuesta_23),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_24,
+            res_respuesta: Number(value.respuesta_24),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_25,
+            res_respuesta: Number(value.respuesta_25),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_26,
+            res_respuesta: Number(value.respuesta_26),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_27,
+            res_respuesta: Number(value.respuesta_27),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_28,
+            res_respuesta: Number(value.respuesta_28),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_29,
+            res_respuesta: Number(value.respuesta_29),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_30,
+            res_respuesta: Number(value.respuesta_30),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_31,
+            res_respuesta: Number(value.respuesta_31),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_32,
+            res_respuesta: Number(value.respuesta_32),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_33,
+            res_respuesta: Number(value.respuesta_33),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_34,
+            res_respuesta: Number(value.respuesta_34),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_35,
+            res_respuesta: Number(value.respuesta_35),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_36,
+            res_respuesta: Number(value.respuesta_36),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_37,
+            res_respuesta: Number(value.respuesta_37),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_38,
+            res_respuesta: Number(value.respuesta_38),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_39,
+            res_respuesta: Number(value.respuesta_39),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_40,
+            res_respuesta: Number(value.respuesta_40),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_41,
+            res_respuesta: Number(value.respuesta_41),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_42,
+            res_respuesta: Number(value.respuesta_42),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_43,
+            res_respuesta: Number(value.respuesta_43),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_44,
+            res_respuesta: Number(value.respuesta_44),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_45,
+            res_respuesta: Number(value.respuesta_45),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_46,
+            res_respuesta: Number(value.respuesta_46),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_47,
+            res_respuesta: Number(value.respuesta_47),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_48,
+            res_respuesta: Number(value.respuesta_48),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_49,
+            res_respuesta: Number(value.respuesta_49),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_50,
+            res_respuesta: Number(value.respuesta_50),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_51,
+            res_respuesta: Number(value.respuesta_51),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_52,
+            res_respuesta: Number(value.respuesta_52),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_53,
+            res_respuesta: Number(value.respuesta_53),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_54,
+            res_respuesta: Number(value.respuesta_54),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_55,
+            res_respuesta: Number(value.respuesta_55),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_56,
+            res_respuesta: Number(value.respuesta_56),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_57,
+            res_respuesta: Number(value.respuesta_57),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_58,
+            res_respuesta: Number(value.respuesta_58),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_59,
+            res_respuesta: Number(value.respuesta_59),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_60,
+            res_respuesta: Number(value.respuesta_60),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_61,
+            res_respuesta: Number(value.respuesta_61),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_62,
+            res_respuesta: Number(value.respuesta_62),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_63,
+            res_respuesta: Number(value.respuesta_63),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_64,
+            res_respuesta: Number(value.respuesta_64),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_65,
+            res_respuesta: Number(value.respuesta_65),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_66,
+            res_respuesta: Number(value.respuesta_66),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_67,
+            res_respuesta: Number(value.respuesta_67),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_68,
+            res_respuesta: Number(value.respuesta_68),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_69,
+            res_respuesta: Number(value.respuesta_69),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_70,
+            res_respuesta: Number(value.respuesta_70),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_71,
+            res_respuesta: Number(value.respuesta_71),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_72,
+            res_respuesta: Number(value.respuesta_72),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_73,
+            res_respuesta: Number(value.respuesta_73),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_74,
+            res_respuesta: Number(value.respuesta_74),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_75,
+            res_respuesta: Number(value.respuesta_75),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_76,
+            res_respuesta: Number(value.respuesta_76),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_77,
+            res_respuesta: Number(value.respuesta_77),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_78,
+            res_respuesta: Number(value.respuesta_78),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_79,
+            res_respuesta: Number(value.respuesta_79),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_80,
+            res_respuesta: Number(value.respuesta_80),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_81,
+            res_respuesta: Number(value.respuesta_81),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_82,
+            res_respuesta: Number(value.respuesta_82),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_83,
+            res_respuesta: Number(value.respuesta_83),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_84,
+            res_respuesta: Number(value.respuesta_84),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_85,
+            res_respuesta: Number(value.respuesta_85),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_86,
+            res_respuesta: Number(value.respuesta_86),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_87,
+            res_respuesta: Number(value.respuesta_87),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_88,
+            res_respuesta: Number(value.respuesta_88),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_89,
+            res_respuesta: Number(value.respuesta_89),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_90,
+            res_respuesta: Number(value.respuesta_90),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_91,
+            res_respuesta: Number(value.respuesta_91),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_92,
+            res_respuesta: Number(value.respuesta_92),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_93,
+            res_respuesta: Number(value.respuesta_93),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_94,
+            res_respuesta: Number(value.respuesta_94),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_95,
+            res_respuesta: Number(value.respuesta_95),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_96,
+            res_respuesta: Number(value.respuesta_96),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_97,
+            res_respuesta: Number(value.respuesta_97),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_98,
+            res_respuesta: Number(value.respuesta_98),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_99,
+            res_respuesta: Number(value.respuesta_99),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_100,
+            res_respuesta: Number(value.respuesta_100),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_101,
+            res_respuesta: Number(value.respuesta_101),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_102,
+            res_respuesta: Number(value.respuesta_102),
+            res_id_paciente: this.id,res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_103,
+            res_respuesta: Number(value.respuesta_103),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_104,
+            res_respuesta: Number(value.respuesta_104),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_105,
+            res_respuesta: Number(value.respuesta_105),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_106,
+            res_respuesta: Number(value.respuesta_106),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_107,
+            res_respuesta: Number(value.respuesta_107),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_108,
+            res_respuesta: Number(value.respuesta_108),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_109,
+            res_respuesta: Number(value.respuesta_109),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_110,
+            res_respuesta: Number(value.respuesta_110),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_111,
+            res_respuesta: Number(value.respuesta_111),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_112,
+            res_respuesta: Number(value.respuesta_112),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_113,
+            res_respuesta: Number(value.respuesta_113),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_114,
+            res_respuesta: Number(value.respuesta_114),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_115,
+            res_respuesta: Number(value.respuesta_115),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_116,
+            res_respuesta: Number(value.respuesta_116),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_117,
+            res_respuesta: Number(value.respuesta_117),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_118,
+            res_respuesta: Number(value.respuesta_118),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this.modelArray.push({
+    
+            res_pregunta: value.pregunta_119,
+            res_respuesta: Number(value.respuesta_119),
+            res_id_paciente: this.id, res_id_maestro:this.maestro
+          });
+    
+          this._ini.EnviarResp(this.modelArray).subscribe(usr => {
+       
+            if(usr){
+              this.blockUI.stop();
+              console.log(usr);
+              Swal.fire('Respuestas Guardadas', `${usr.descripcion}!`, 'success');
+          
+              const btn = document.getElementById('btn') as HTMLButtonElement | null;
+              btn?.setAttribute('disabled', '');
+            }
+    
+        },
+          error => {
+            console.log(error);
+            this.blockUI.stop();
+            Swal.fire({
+              title: 'ERROR!!!',
+              text: error.error.message,
+              icon: 'error'
+            });
+    
+          });
         }
 
     },
@@ -1166,22 +1188,7 @@ export class TestscidComponent {
 
       });
 
-      /* this._ini.DeleteResp(this.id).subscribe(del=>{
-        if(del){
-           
-        }
-      },error=>{
-        console.log(error);
-        this.blockUI.stop();
-        Swal.fire({
-          title: 'ERROR!!!',
-          text: error.error.message,
-          icon: 'error'
-        });
-      }); */
-
-
-
+     
       const btn = document.getElementById('btn') as HTMLButtonElement | null;
       btn?.setAttribute('disabled', '');
 
